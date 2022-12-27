@@ -5,6 +5,7 @@ import Bee from './projects/bee/Bee';
 import Blink from './projects/blink/Blink';
 import Red from "./projects/red/Red";
 import Eye from "./projects/eye/Eye";
+import BrushCursor from "./projects/brush-cursor/BrushCursor";
 
 render(() => (
         <Router>
@@ -14,6 +15,7 @@ render(() => (
                 <Route path="/bee" component={Bee}/>
                 <Route path="/blink" component={Blink}/>
                 <Route path="/eye" component={Eye}/>
+                <Route path="/brush-cursor" component={BrushCursor}/>
             </Routes>
         </Router>
     ),

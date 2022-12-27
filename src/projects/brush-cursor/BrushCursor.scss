@@ -1,0 +1,64 @@
+#BrushCursor {
+  height: 100vh;
+
+  .container {
+    height: 100%;
+    width: 100%;
+    background: darkslategrey;
+  }
+
+  .p {
+    position: absolute;
+    font-size: 64px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .p1 {
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+    color: cyan;
+  }
+
+  .p2 {
+    color: red;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    animation: text-animation 3s ease-in-out forwards alternate infinite;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+  }
+
+  .p3 {
+    height: 20%;
+    color: transparent;
+  }
+
+  @keyframes text-animation {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 0% 1%, 0% 100%, 0% 100%);
+    }
+  }
+
+  .cursor {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translate(0, -50%);
+    border-right: 2px solid red;
+    animation: cursor-animation 3s ease-in-out forwards alternate infinite;
+  }
+
+  @keyframes cursor-animation {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+}

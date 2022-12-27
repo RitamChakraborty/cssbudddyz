@@ -7,6 +7,7 @@ import Red from "./projects/red/Red";
 import Eye from "./projects/eye/Eye";
 import BrushCursor from "./projects/brush-cursor/BrushCursor";
 import Eight from "./projects/eight/Eight";
+import SlightlySmiling from "./projects/evil-smile/SlightlySmiling";
 
 render(() => (
         <Router>
@@ -18,6 +19,7 @@ render(() => (
                 <Route path="/eye" component={Eye}/>
                 <Route path="/brush-cursor" component={BrushCursor}/>
                 <Route path="/eight" component={Eight}/>
+                <Route path="/slightly-smiling" component={SlightlySmiling}/>
             </Routes>
         </Router>
     ),

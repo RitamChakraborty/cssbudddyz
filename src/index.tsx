@@ -12,6 +12,7 @@ import FloatingNavigation from "./projects/floating-navigation/FloatingNavigatio
 import Switch from "./projects/switch/Switch";
 import Pacman from "./projects/pacman/Pacman";
 import Rolex from "./projects/rolex/Rolex";
+import SmileInjection from "./projects/smile-injection/SmileInjection";
 
 render(() => (
         <Router>
@@ -28,6 +29,7 @@ render(() => (
                 <Route path="/switch" component={Switch}/>
                 <Route path="/pacman" component={Pacman}/>
                 <Route path="/rolex" component={Rolex}/>
+                <Route path="/smile-injection" component={SmileInjection}/>
             </Routes>
         </Router>
     ),

@@ -1,0 +1,156 @@
+#Bee {
+  height: 100vh;
+}
+
+.bee {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg) scale(5);
+}
+
+.bee .body {
+  top: 12%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  background: yellowgreen;
+  position: relative;
+  clip-path: ellipse(33% 50% at 50% 50%);
+}
+
+.stripe {
+  height: 20%;
+  width: 100%;
+  border-bottom: 8px solid darkslategrey;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.body .strip-1 {
+  top: 15%;
+}
+
+.body .strip-2 {
+  top: 40%;
+}
+
+.body .strip-3 {
+  top: 65%;
+}
+
+.bee .antenna-wrapper {
+  position: absolute;
+  height: 30%;
+  width: 5%;
+}
+
+.antenna-wrapper .tip {
+  position: absolute;
+  top: -2%;
+  height: 13%;
+  width: 70%;
+  border-radius: 50%;
+  background: darkslategrey;
+}
+
+.bee .antenna {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border-left: 2px solid darkslategrey;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+}
+
+.bee .antenna-wrapper-1 {
+  transform: rotate(-40deg);
+  top: 1%;
+  left: 35%;
+}
+
+.bee .antenna-wrapper-2 {
+  transform: rotate(-50deg);
+  top: 3%;
+  left: 30%;
+}
+
+.bee .eye {
+  position: absolute;
+  left: 41%;
+  height: 2%;
+  width: 2%;
+  border-radius: 50%;
+  background: darkslategrey;
+  top: 17%;
+}
+
+.bee .smile {
+  height: 10%;
+  width: 1%;
+  border-radius: 82% 18% 48% 52% / 45% 33% 67% 55%;
+  border-left: 2px solid darkslategrey;
+  position: absolute;
+  top: 14%;
+  left: 52%;
+  transform: rotate(200deg);
+}
+
+.bee .wing {
+  position: absolute;
+  height: 55%;
+  width: 55%;
+  background-color: lightgray;
+  border-radius: 50%;
+  perspective-origin: right center;
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  perspective: 1000px;
+}
+
+.bee .wing-1 {
+  left: -18%;
+  top: 23%;
+  animation: fly-1 200ms infinite forwards alternate-reverse 1s;
+}
+
+.bee .wing-2 {
+  top: 35%;
+  left: -13%;
+  animation: fly-2 220ms infinite forwards alternate-reverse 1s;
+}
+
+.bee .sting {
+  position: absolute;
+  top: 87%;
+  left: 42%;
+  height: 15%;
+  width: 15%;
+  background-color: darkslategrey;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: rotateY(0);
+    opacity: 0.35;
+  }
+
+  to {
+    transform: rotateY(-50deg);
+    opacity: 0.2;
+  }
+}
+
+@keyframes fly-2 {
+  from {
+    transform: rotateY(0);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: rotateY(40deg);
+    opacity: 0.5;
+  }
+}

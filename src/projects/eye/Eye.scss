@@ -1,0 +1,234 @@
+#Eye {
+  height: 100vh;
+  background: rgb(238, 203, 189) no-repeat 100vh 100vw;
+
+  div {
+    box-sizing: content-box;
+  }
+}
+
+.eyes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spacer {
+  height: 10vh;
+  width: 10vw;
+}
+
+@media screen and (max-width: 750px) {
+  .eyes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+
+  .left-eye-container {
+    transform: rotateY(180deg) rotateZ(-90deg);
+  }
+
+  .right-eye-container {
+    transform: rotateZ(90deg);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .left-eye-container {
+    transform: rotateY(180deg);
+  }
+}
+
+.eye-container {
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+
+.eye-container * {
+  position: absolute;
+}
+
+.eyebrow {
+  position: absolute;
+  width: 330px;
+  height: 200px;
+  inset: 0;
+  background-color: #141313;
+  clip-path: polygon(46% 28%, 29% 33%, 11% 41%, 0 51%, 0 65%, 19% 50%, 39% 41%, 57% 36%, 69% 38%, 100% 48%, 79% 33%, 66% 26%);
+}
+
+.upper {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 220px;
+  height: 180px;
+  clip-path: polygon(12% 34%, 25% 19%, 50% 11%, 68% 12%, 85% 18%, 99% 36%, 33% 54%, 0 62%);
+  background-image: linear-gradient(to right, rgb(192, 12, 12), rgb(241, 31, 31), rgb(20, 0, 0));
+}
+
+.shape {
+  position: absolute;
+  top: 33%;
+  left: 5%;
+  width: 215px;
+  height: 158px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border-width: 20px 2px 10px 10px;
+  border-color: rgb(231, 166, 166);
+  clip-path: polygon(0 53%, 20% 32%, 39% 27%, 59% 28%, 77% 28%, 100% 34%, 88% 49%, 79% 53%, 67% 60%, 33% 63%, 19% 59%, 9% 53%);
+  border-style: groove;
+}
+
+.eyeball {
+  position: absolute;
+  top: 45%;
+  left: 28%;
+  width: 60px;
+  height: 60px;
+  background-image: linear-gradient(45deg, rgb(110, 169, 247), rgb(80, 45, 235));
+  border-radius: 50%;
+  border-width: 3px 3px 3px 3px;
+  border-color: rgba(1, 131, 51, 0.822);
+  border-style: solid;
+}
+
+.eye-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  background-color: rgb(16, 25, 105);
+  border-radius: 50%;
+  border-width: 7px 7px 0 0; /* border problem */
+  border-color: rgb(0, 29, 92);
+  border-style: groove;
+}
+
+.reflection {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.562);
+}
+
+.triangle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  inset: 0;
+  width: 23px;
+  height: 23px;
+  background-color: rgba(0, 139, 53, 0.459);
+  clip-path: polygon(48% 41%, 24% 100%, 77% 100%);
+  transform-origin: center bottom;
+}
+
+.triangle1 {
+  left: 50%;
+  top: 82%;
+}
+
+.triangle2 {
+  transform: rotate(-28deg);
+  left: 53%;
+  top: 56%;
+}
+
+.triangle3 {
+  transform: rotate(-57deg);
+  left: 70.5%;
+  top: 41.5%;
+}
+
+.triangle4 {
+  transform: rotate(-75deg);
+  left: 80%;
+  top: 20%;
+}
+
+.triangle5 {
+  transform: rotate(-94deg);
+  left: 80%;
+  top: -3%;
+}
+
+.triangle6 {
+  transform: rotate(-104deg);
+  left: 68%;
+  top: -25%;
+}
+
+.triangle7 {
+  transform: rotate(28deg);
+  left: 8%;
+  top: 57%;
+}
+
+.triangle8 {
+  transform: rotate(50deg);
+  left: -10%;
+  top: 42%;
+}
+
+.triangle9 {
+  transform: rotate(70deg);
+  left: -20%;
+  top: 20%;
+}
+
+.triangle10 {
+  transform: rotate(95deg);
+  left: -20%;
+  top: -3%;
+}
+
+.triangle11 {
+  transform: rotate(115deg);
+  left: -10%;
+  top: -23%;
+}
+
+.eyelid {
+  position: absolute;
+  top: 35.3%;
+  left: 4%;
+  width: 259px;
+  height: 170px;
+  clip-path: polygon(2% 61%, 10% 42%, 25% 28%, 45% 20%, 75% 24%, 100% 19%, 88% 34%, 72% 35%, 49% 29%, 25% 36%, 14% 44%);
+  background-color: #141313;
+  transform: rotate(5deg);
+}
+
+.eyebrow1 {
+  position: absolute;
+  top: 33.3%;
+  left: 5%;
+  width: 261px;
+  height: 170px;
+  background-color: #d1caca;
+  clip-path: polygon(41% 65%, 30% 63%, 19% 60%, 0 56%, 19% 63%, 41% 70%, 63% 68%, 79% 59%, 88% 45%, 82% 43%, 72% 55%, 57% 64%);
+  transform: rotate(-1deg);
+}
+
+.eyebrow2 {
+  position: absolute;
+  top: 34.5%;
+  left: 4.5%;
+  width: 261px;
+  height: 170px;
+  background-color: #2e2424;
+  clip-path: polygon(41% 65%, 30% 63%, 19% 60%, 0 55%, 19% 63%, 41% 70%, 63% 68%, 79% 59%, 99% 36%, 85% 40%, 72% 55%, 57% 64%);
+}

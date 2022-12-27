@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Bee from './projects/bee/Bee';
 import Blink from './projects/blink/Blink';
 import Red from "./projects/red/Red";
+import Eye from "./projects/eye/Eye";
 
 render(() => (
         <Router>
@@ -12,6 +13,7 @@ render(() => (
                 <Route path="/red" component={Red}/>
                 <Route path="/bee" component={Bee}/>
                 <Route path="/blink" component={Blink}/>
+                <Route path="/eye" component={Eye}/>
             </Routes>
         </Router>
     ),

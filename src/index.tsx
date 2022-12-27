@@ -14,6 +14,7 @@ import Pacman from "./projects/pacman/Pacman";
 import Rolex from "./projects/rolex/Rolex";
 import SmileInjection from "./projects/smile-injection/SmileInjection";
 import Santa from "./projects/santa/Santa";
+import Butterfly from "./projects/butterfly/Butterfly";
 
 render(() => (
         <Router>
@@ -32,6 +33,7 @@ render(() => (
                 <Route path="/rolex" component={Rolex}/>
                 <Route path="/smile-injection" component={SmileInjection}/>
                 <Route path="/santa" component={Santa}/>
+                <Route path="/butterfly" component={Butterfly}/>
             </Routes>
         </Router>
     ),

@@ -9,6 +9,7 @@ import BrushCursor from "./projects/brush-cursor/BrushCursor";
 import Eight from "./projects/eight/Eight";
 import SlightlySmiling from "./projects/evil-smile/SlightlySmiling";
 import FloatingNavigation from "./projects/floating-navigation/FloatingNavigation";
+import Switch from "./projects/switch/Switch";
 
 render(() => (
         <Router>
@@ -22,6 +23,7 @@ render(() => (
                 <Route path="/eight" component={Eight}/>
                 <Route path="/slightly-smiling" component={SlightlySmiling}/>
                 <Route path="/floating-navigation" component={FloatingNavigation}/>
+                <Route path="/switch" component={Switch}/>
             </Routes>
         </Router>
     ),

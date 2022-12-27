@@ -1,0 +1,52 @@
+#Pacman {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #000000;
+
+  .container {
+    height: 100px;
+    width: 100px;
+  }
+
+  .head, .mouth {
+    height: 50%;
+    width: 100%;
+  }
+
+  .head {
+    background-color: yellow;
+    animation: rotate1 both infinite alternate 500ms linear;
+    transform-origin: bottom;
+    border-top-left-radius: 400px;
+    border-top-right-radius: 400px;
+  }
+
+  .mouth {
+    background-color: yellow;
+    animation: rotate2 both infinite alternate 500ms linear;
+    transform-origin: top;
+    border-bottom-left-radius: 400px;
+    border-bottom-right-radius: 400px;
+  }
+
+  @keyframes rotate1 {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes rotate2 {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -11,6 +11,7 @@ import SlightlySmiling from "./projects/evil-smile/SlightlySmiling";
 import FloatingNavigation from "./projects/floating-navigation/FloatingNavigation";
 import Switch from "./projects/switch/Switch";
 import Pacman from "./projects/pacman/Pacman";
+import Rolex from "./projects/rolex/Rolex";
 
 render(() => (
         <Router>
@@ -26,6 +27,7 @@ render(() => (
                 <Route path="/floating-navigation" component={FloatingNavigation}/>
                 <Route path="/switch" component={Switch}/>
                 <Route path="/pacman" component={Pacman}/>
+                <Route path="/rolex" component={Rolex}/>
             </Routes>
         </Router>
     ),

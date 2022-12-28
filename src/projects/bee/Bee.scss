@@ -6,9 +6,21 @@
     height: 100px;
     width: 100px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg) scale(5);
+    transform: translate(-50%, -50%) rotate(90deg) scale(2);
+  }
+
+  @media only screen and (min-width: 500px) {
+    .bee {
+      transform: translate(-50%, -50%) rotate(90deg) scale(3.5);
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    .bee {
+      transform: translate(-50%, -50%) rotate(90deg) scale(5);
+    }
   }
 
   .bee .body {

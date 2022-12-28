@@ -17,7 +17,7 @@ export default function Clock() {
             const date = new Date();
             year.innerText = date.getFullYear().toString();
             month.innerText = date.getMonth().toString();
-            day.innerText = date.getDay().toString();
+            day.innerText = date.getUTCDate().toString();
             hour.innerText = date.getHours().toString();
             minute.innerText = date.getMinutes().toString();
             second.innerText = date.getSeconds().toString();

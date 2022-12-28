@@ -15,6 +15,7 @@ import Rolex from "./projects/rolex/Rolex";
 import SmileInjection from "./projects/smile-injection/SmileInjection";
 import Santa from "./projects/santa/Santa";
 import Butterfly from "./projects/butterfly/Butterfly";
+import Ripple from "./projects/ripple/Ripple";
 
 render(() => (
         <Router>
@@ -34,6 +35,7 @@ render(() => (
                 <Route path="/smile-injection" component={SmileInjection}/>
                 <Route path="/santa" component={Santa}/>
                 <Route path="/butterfly" component={Butterfly}/>
+                <Route path="/ripple" component={Ripple}/>
             </Routes>
         </Router>
     ),

@@ -1,0 +1,64 @@
+#Ripple {
+  height: 100vh;
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #0a86a3 0%, #62058e 100%);
+
+  .container {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    background: deeppink;
+  }
+
+  .container div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+
+  .d1 {
+    animation: ripple 3s forwards infinite linear;
+  }
+
+  .d2 {
+    animation: ripple 3s .5s forwards infinite linear;
+  }
+
+  .d3 {
+    animation: ripple 3s 1s forwards infinite linear;
+  }
+
+  .d4 {
+    animation: ripple 3s 1.5s forwards infinite linear;
+  }
+
+  .d5 {
+    animation: ripple 3s 2s forwards infinite linear;
+  }
+
+  .d6 {
+    animation: ripple 3s 2.5s forwards infinite linear;
+  }
+
+  @keyframes ripple {
+    from {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 1;
+    }
+
+    to {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+}

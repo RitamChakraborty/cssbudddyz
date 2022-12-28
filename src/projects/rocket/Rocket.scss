@@ -1,0 +1,421 @@
+#Rocket {
+  height: 100vh;
+  overflow: hidden;
+
+  .rocket-container {
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    background: #efefef;
+    display: grid;
+    place-items: center;
+  }
+
+  .rocket-placeholder {
+    position: relative;
+    height: 80vh;
+    width: 300px;
+    background: #13515c;
+    border-radius: 1rem;
+    display: grid;
+  }
+
+  .ignition-countdown-container {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .ignition-countdown-container-animation {
+    animation: ignition-countdown-container-animation 1s forwards ease-out;
+  }
+
+  @keyframes ignition-countdown-container-animation {
+    from {
+      top: 0;
+    }
+    to {
+      top: 100vh;
+    }
+  }
+
+  .ignition-countdown {
+    color: yellowgreen;
+    font-family: 'Qahiri', sans-serif;
+    font-size: 80px;
+  }
+
+  .rocket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rocket-animation-1 {
+    transform-origin: bottom;
+    animation: rocket-animation-1 500ms forwards;
+  }
+
+  @keyframes rocket-animation-1 {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  .rocket-animation-2 {
+    transform-origin: top;
+    animation: rocket-animation-2 1s forwards ease-out;
+  }
+
+  @keyframes rocket-animation-2 {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.7);
+    }
+  }
+
+  .rocket-animation-3 {
+    animation: rocket-animation-3 1s forwards;
+  }
+
+  @keyframes rocket-animation-3 {
+    from {
+      transform: scale(0.7) scaleX(1);
+    }
+    to {
+      transform: scale(0.7) scaleX(1.2);
+    }
+  }
+
+  .rocket div {
+    position: relative;
+  }
+
+  .rocket .head {
+    height: 140px;
+    width: 140px;
+    background: rgba(0, 0, 0, 1);
+    clip-path: polygon(50% 22%, 0% 100%, 100% 100%);
+    margin-bottom: -10px;
+  }
+
+  .rocket .head::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 8px;
+    height: 110px;
+    width: 110px;
+    background: #ac0000;
+    clip-path: polygon(50% 22%, 0% 100%, 100% 100%);
+  }
+
+  .rocket .head::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    height: 20px;
+    width: 100px;
+    z-index: 1;
+    bottom: 36px;
+    left: 39px;
+    clip-path: polygon(12% 0%, 91% 0%, 100% 100%, 0% 100%);
+    transform: rotate(-123deg);
+  }
+
+  .rocket .body {
+    width: 120px;
+    height: 200px;
+    background: rgba(0, 0, 0, 1);
+  }
+
+  .rocket .body::before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    height: 190px;
+    width: 100px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .rocket .body::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    height: 190px;
+    width: 30px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .rocket .body .face {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .rocket .body .face .eyes {
+    margin-top: 35px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .rocket .body .face .eyes .eye {
+    margin-top: -15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border-bottom: 5px solid black;
+  }
+
+  .eye-i-2 {
+    height: 10px;
+    width: 10px;
+    background: black;
+    border-radius: 50%;
+  }
+
+  .eye-2-i-1 {
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+  }
+
+  .rocket .body .face .mouth-container {
+    margin-top: 23px;
+    height: 80px;
+    width: 100%;
+  }
+
+  .rocket .body .face .mouth-container .m {
+    margin: 0 auto;
+    height: 5px;
+    width: 40%;
+    border-radius: 1rem;
+    background: black;
+  }
+
+  .mouth-i-2 {
+    margin: 0 auto;
+    height: 5px;
+    width: 5px;
+    background: black;
+    border-radius: 50%;
+  }
+
+  .mouth-i-1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-top: 20px solid black;
+    transform: rotate(45deg);
+    margin: -10px 25px;
+  }
+
+  .rocket .body .stripes {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .rocket .body .stripes .stripe {
+    height: 20px;
+    width: 100px;
+    background: #ac0000;
+  }
+
+  .rocket .tail {
+    height: 50px;
+    width: 170px;
+    background: rgba(0, 0, 0, 1);
+    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+    z-index: 5;
+  }
+
+  .rocket .tail::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 140px;
+    right: 15px;
+    bottom: 10px;
+    background: #ac0000;
+    clip-path: polygon(11% 0%, 89% 0%, 100% 100%, 0% 100%);
+  }
+
+  .ignition {
+    width: 100%;
+  }
+
+  .ignition * {
+    margin: 0 auto;
+  }
+
+  .fire {
+    visibility: hidden;
+  }
+
+  .fire1 {
+    height: 70px;
+    width: 70px;
+    background: red;
+    margin-top: -45px;
+    border-radius: 50%;
+    z-index: 3;
+    animation: fire-animation 80ms forwards infinite alternate;
+  }
+
+  .fire2 {
+    height: 90px;
+    width: 90px;
+    background: #ffff65;
+    margin-top: -70px;
+    border-radius: 50%;
+    z-index: 2;
+    animation: fire-animation 50ms forwards infinite alternate;
+    animation-delay: 5ms;
+  }
+
+  .fire3 {
+    height: 110px;
+    width: 110px;
+    background: white;
+    margin-top: -95px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: fire-animation 50ms forwards infinite alternate;
+    animation-delay: 10ms;
+  }
+
+  @keyframes fire-animation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.7);
+    }
+  }
+
+  .boom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    font-family: 'Lemon', cursive;
+    font-size: 60px;
+    color: yellowgreen;
+    text-shadow: 5px 5px 0 black;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    transform: rotateX(-35deg) rotateY(20deg);
+    opacity: 0;
+  }
+
+  .boom-animation {
+    animation: boom-animation 500ms forwards;
+  }
+
+  @keyframes boom-animation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .anniversary-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+  }
+
+  .anniversary-container .wish {
+    margin: 1rem;
+    font-size: xxx-large;
+    color: yellowgreen;
+    font-family: 'Poller One', cursive;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  .happy-animation {
+    animation: happy-animation 500ms forwards alternate infinite;
+  }
+
+  @keyframes happy-animation {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0.9);
+    }
+  }
+
+  .friendship-animation {
+    animation: friendship-animation 500ms forwards alternate infinite;
+    animation-delay: 100ms;
+  }
+
+  @keyframes friendship-animation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.8);
+    }
+  }
+
+  .anniversary-animation {
+    animation: anniversary-animation 500ms forwards alternate infinite;
+    animation-delay: 200ms;
+  }
+
+  @keyframes anniversary-animation {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0.8);
+    }
+  }
+}

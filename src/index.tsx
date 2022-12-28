@@ -17,6 +17,7 @@ import Santa from "./projects/santa/Santa";
 import Butterfly from "./projects/butterfly/Butterfly";
 import Ripple from "./projects/ripple/Ripple";
 import Clock from "./projects/clock/Clock";
+import Rocket from "./projects/rocket/Rocket";
 
 render(() => (
         <Router>
@@ -38,6 +39,7 @@ render(() => (
                 <Route path="/butterfly" component={Butterfly}/>
                 <Route path="/ripple" component={Ripple}/>
                 <Route path="/clock" component={Clock}/>
+                <Route path="/rocket" component={Rocket}/>
             </Routes>
         </Router>
     ),

@@ -2,336 +2,357 @@
   height: 100vh;
   overflow: hidden;
 
-  .butterfly {
+  .container {
+    height: 600px;
+    width: 600px;
     position: absolute;
-    height: 500px;
-    width: 500px;
-    top: 180px;
-    left: 110px;
-    transform-origin: center;
-    transform: scale(0.5) rotate(-20deg);
-    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
 
-    .tentacles {
+    .butterfly {
       position: absolute;
-      height: 100px;
-      width: 100px;
-      left: 23%;
-      top: 23%;
-      background-color: transparent;
-      border-radius: 50% 50% 0 50%;
-      border: 3px solid;
-      border-color: transparent black black transparent;
-    }
-
-    .head {
-      position: absolute;
-      height: 30px;
-      width: 30px;
-      left: 40.5%;
-      top: 40.7%;
-      background-color: rgb(39, 37, 37);
-      border-radius: 50%;
-    }
-
-    .body1 {
-      position: absolute;
-      height: 100px;
-      width: 20px;
-      left: 58.2%;
-      top: 50%;
-      background-color: rgb(31, 28, 28);
-      border-radius: 100px 100px;
-      transform: rotate(-45deg);
-    }
-
-    .body {
-      position: absolute;
-      height: 60px;
-      width: 60px;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      top: 50%;
-      background-color: rgb(41, 39, 39);
-      border-radius: 0 100px 0 100px;
-    }
-
-    .wings {
-      position: absolute;
+      height: 500px;
+      width: 500px;
+      top: -11px;
+      left: 110px;
       transform-origin: center;
-      transform: rotate(-45deg) scale(1.7);
-      top: 27%;
-      left: 27%;
-      height: 200px;
-      width: 200px;
+      transform: scale(0.5) rotate(-20deg);
+      z-index: 3;
 
-      .wing {
+      .tentacles {
         position: absolute;
         height: 100px;
         width: 100px;
-        background: royalblue;
-        perspective: 1000px;
-        transform-style: preserve-3d;
+        left: 23%;
+        top: 23%;
+        background-color: transparent;
+        border-radius: 50% 50% 0 50%;
+        border: 3px solid;
+        border-color: transparent black black transparent;
       }
 
-      .wing-top-left {
-        top: 15px;
-        left: -5px;
-        border-radius: 25% 100% 0 50%;
-        background: rgb(86, 91, 117);
-        background: linear-gradient(-90deg, rgb(0, 40, 238) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
-        transform-origin: bottom right;
-        transform: rotate(-15deg);
-        animation: wing-top-left-animation 500ms forwards alternate infinite;
-        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+      .head {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        left: 40.5%;
+        top: 40.7%;
+        background-color: rgb(39, 37, 37);
+        border-radius: 50%;
       }
 
-      @keyframes wing-top-left-animation {
-        from {
+      .body1 {
+        position: absolute;
+        height: 100px;
+        width: 20px;
+        left: 58.2%;
+        top: 50%;
+        background-color: rgb(31, 28, 28);
+        border-radius: 100px 100px;
+        transform: rotate(-45deg);
+      }
+
+      .body {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        background-color: rgb(41, 39, 39);
+        border-radius: 0 100px 0 100px;
+      }
+
+      .wings {
+        position: absolute;
+        transform-origin: center;
+        transform: rotate(-45deg) scale(1.7);
+        top: 27%;
+        left: 27%;
+        height: 200px;
+        width: 200px;
+
+        .wing {
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          background: royalblue;
+          perspective: 1000px;
+          transform-style: preserve-3d;
+        }
+
+        .wing-top-left {
+          top: 15px;
+          left: -5px;
+          border-radius: 25% 100% 0 50%;
+          background: rgb(86, 91, 117);
+          background: linear-gradient(-90deg, rgb(0, 40, 238) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
+          transform-origin: bottom right;
+          transform: rotate(-15deg);
+          animation: wing-top-left-animation 500ms forwards alternate infinite;
           box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
-          transform: rotate(-15eg);
         }
 
-        to {
-          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0);
-          transform: rotate(-15deg) rotateY(60deg);
+        @keyframes wing-top-left-animation {
+          from {
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(-15eg);
+          }
+
+          to {
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0);
+            transform: rotate(-15deg) rotateY(60deg);
+          }
         }
-      }
 
-      .wing-top-right {
-        top: 15px;
-        left: 105px;
-        border-radius: 100% 25% 50% 0;
-        background: rgb(86, 91, 117);
-        background: linear-gradient(90deg, rgb(0, 40, 238) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
-        transform-origin: bottom left;
-        transform: rotate(15deg);
-        animation: wing-top-right-animation 500ms forwards alternate infinite;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      @keyframes wing-top-right-animation {
-        from {
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        .wing-top-right {
+          top: 15px;
+          left: 105px;
+          border-radius: 100% 25% 50% 0;
+          background: rgb(86, 91, 117);
+          background: linear-gradient(90deg, rgb(0, 40, 238) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
+          transform-origin: bottom left;
           transform: rotate(15deg);
-        }
-
-        to {
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
-          transform: rotate(15deg) rotateY(60deg);
-        }
-      }
-
-      .wing-bottom-left {
-        top: 115px;
-        left: -6px;
-        border-radius: 90% 0 70% 50%;
-        background: rgb(86, 91, 117);
-        background: linear-gradient(225deg, rgb(29, 59, 207) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
-        transform-origin: top right;
-        transform: rotate(7deg);
-        animation: wing-bottom-left-animation 500ms forwards alternate infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      @keyframes wing-bottom-left-animation {
-        from {
-          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
-          transform: rotate(7deg);
-        }
-
-        to {
-          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0);
-          transform: rotate(7deg) rotateY(55deg);
-        }
-      }
-
-      .wing-bottom-right {
-        top: 115px;
-        left: 105px;
-        border-radius: 0 90% 50% 70%;
-        background: rgb(86, 91, 117);
-        background: linear-gradient(135deg, rgb(29, 59, 207) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
-        transform-origin: top left;
-        transform: rotate(-7deg);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-        animation: wing-bottom-right-animation 500ms forwards alternate infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
-
-      @keyframes wing-bottom-right-animation {
-        from {
+          animation: wing-top-right-animation 500ms forwards alternate infinite;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-          transform: rotate(-7eg);
         }
 
-        to {
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
-          transform: rotate(-7deg) rotateY(55deg);
+        @keyframes wing-top-right-animation {
+          from {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(15deg);
+          }
+
+          to {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
+            transform: rotate(15deg) rotateY(60deg);
+          }
         }
+
+        .wing-bottom-left {
+          top: 115px;
+          left: -6px;
+          border-radius: 90% 0 70% 50%;
+          background: rgb(86, 91, 117);
+          background: linear-gradient(225deg, rgb(29, 59, 207) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
+          transform-origin: top right;
+          transform: rotate(7deg);
+          animation: wing-bottom-left-animation 500ms forwards alternate infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes wing-bottom-left-animation {
+          from {
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(7deg);
+          }
+
+          to {
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0);
+            transform: rotate(7deg) rotateY(55deg);
+          }
+        }
+
+        .wing-bottom-right {
+          top: 115px;
+          left: 105px;
+          border-radius: 0 90% 50% 70%;
+          background: rgb(86, 91, 117);
+          background: linear-gradient(135deg, rgb(29, 59, 207) 0%, rgba(175, 179, 198, 1) 42%, rgba(149, 158, 170, 1) 68%, rgba(3, 25, 80, 1) 96%);
+          transform-origin: top left;
+          transform: rotate(-7deg);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          animation: wing-bottom-right-animation 500ms forwards alternate infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes wing-bottom-right-animation {
+          from {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(-7eg);
+          }
+
+          to {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
+            transform: rotate(-7deg) rotateY(55deg);
+          }
+        }
+      }
+    }
+
+    .plant {
+      position: absolute;
+      left: 100px;
+      bottom: 200px;
+      height: 300px;
+      width: 300px;
+
+      .flower {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        z-index: 1;
+
+        .core {
+          height: 32%;
+          width: 32%;
+          border-radius: 50%;
+          position: absolute;
+          transform: translate(-48%, -40%);
+          top: 50%;
+          left: 48%;
+          background: yellow;
+          z-index: 2;
+        }
+
+        .petals {
+          height: 100%;
+          width: 100%;
+
+          .petal {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 45%;
+            width: 15%;
+            background-color: rgb(205, 32, 236);
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            transform-origin: bottom center;
+            transform: translate(-50%, -90%) rotate(-20deg);
+          }
+
+          .p2 {
+            transform: translate(-50%, -100%) rotate(5deg);
+          }
+
+          .p3 {
+            transform: translate(-50%, -90%) rotate(30deg);
+          }
+
+          .p4 {
+            transform: translate(-65%, -90%) rotate(70deg);
+          }
+
+          .p5 {
+            transform: translate(-50%, -100%) rotate(100deg);
+          }
+
+          .p6 {
+            transform: translate(-75%, -89%) rotate(115deg);
+          }
+
+          .p8 {
+            transform: translate(-65%, -100%) rotate(160deg);
+          }
+
+          .p9 {
+            transform: translate(-70%, -95%) rotate(185deg);
+          }
+
+          .p10 {
+            transform: translate(-60%, -104%) rotate(212deg);
+          }
+
+          .p11 {
+            transform: translate(-50%, -97%) rotate(250deg);
+          }
+
+          .p12 {
+            transform: translate(-60%, -102%) rotate(271deg);
+          }
+
+          .p13 {
+            transform: translate(-40%, -105%) rotate(292deg);
+          }
+        }
+      }
+
+      .flower1 {
+        top: 57%;
+        left: 2%;
+      }
+
+      .flower2 {
+        top: 15%;
+        left: 52%;
+        transform: scale(0.9);
+
+        .petal {
+          background-color: rgb(217, 5, 221) !important;
+        }
+      }
+
+      .stem1 {
+        position: absolute;
+        height: 50px;
+        width: 110px;
+        left: 35%;
+        top: 111%;
+        background-color: transparent;
+        border-radius: 50% 50% 50% 90%;
+        border: 8px solid;
+        border-color: transparent transparent rgb(3, 95, 24) transparent;
+        transform: rotate(75deg)
+      }
+
+      .stem2 {
+        position: absolute;
+        height: 240px;
+        width: 180px;
+        left: 25.5%;
+        top: 20%;
+        background-color: transparent;
+        border-radius: 5% 90% 0 80%;
+        border: 6px solid;
+        border-color: transparent rgb(5, 113, 10) rgb(2, 104, 26) transparent;
+        transform: rotate(47deg)
+      }
+
+      .leaf1 {
+        position: absolute;
+        height: 40px;
+        width: 44px;
+        transform: translate(-50%, -50%) rotate(30deg);
+        left: 65%;
+        top: 74%;
+        background-color: rgb(1, 218, 81);
+        border-radius: 0 100px 0 100px;
+      }
+
+      .leaf2 {
+        position: absolute;
+        height: 60px;
+        width: 70px;
+        transform: translate(-50%, -50%) rotate(-8deg);
+        left: 34%;
+        top: 119%;
+        background-color: rgb(7, 167, 66);
+        border-radius: 0 100px 0 100px;
+      }
+
+      .leaf3 {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        transform: translate(-50%, -50%) rotate(130deg);
+        left: 67%;
+        top: 102%;
+        background-color: rgb(7, 167, 66);
+        border-radius: 0 100px 0 100px;
       }
     }
   }
 
-  .plant {
-    position: absolute;
-    left: 100px;
-    bottom: 200px;
-    height: 300px;
-    width: 300px;
-
-    .flower {
-      position: absolute;
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      z-index: 1;
-
-      .core {
-        height: 32%;
-        width: 32%;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-48%, -40%);
-        top: 50%;
-        left: 48%;
-        background: yellow;
-        z-index: 2;
-      }
-
-      .petals {
-        height: 100%;
-        width: 100%;
-
-        .petal {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          height: 45%;
-          width: 15%;
-          background-color: rgb(205, 32, 236);
-          border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-          transform-origin: bottom center;
-          transform: translate(-50%, -90%) rotate(-20deg);
-        }
-
-        .p2 {
-          transform: translate(-50%, -100%) rotate(5deg);
-        }
-
-        .p3 {
-          transform: translate(-50%, -90%) rotate(30deg);
-        }
-
-        .p4 {
-          transform: translate(-65%, -90%) rotate(70deg);
-        }
-
-        .p5 {
-          transform: translate(-50%, -100%) rotate(100deg);
-        }
-
-        .p6 {
-          transform: translate(-75%, -89%) rotate(115deg);
-        }
-
-        .p8 {
-          transform: translate(-65%, -100%) rotate(160deg);
-        }
-
-        .p9 {
-          transform: translate(-70%, -95%) rotate(185deg);
-        }
-
-        .p10 {
-          transform: translate(-60%, -104%) rotate(212deg);
-        }
-
-        .p11 {
-          transform: translate(-50%, -97%) rotate(250deg);
-        }
-
-        .p12 {
-          transform: translate(-60%, -102%) rotate(271deg);
-        }
-
-        .p13 {
-          transform: translate(-40%, -105%) rotate(292deg);
-        }
-      }
+  @media only screen and (min-width: 500px) {
+    .container {
+      transform: translate(-50%, -50%) scale(0.8);
     }
+  }
 
-    .flower1 {
-      top: 57%;
-      left: 2%;
-    }
-
-    .flower2 {
-      top: 15%;
-      left: 52%;
-      transform: scale(0.9);
-
-      .petal {
-        background-color: rgb(217, 5, 221) !important;
-      }
-    }
-
-    .stem1 {
-      position: absolute;
-      height: 50px;
-      width: 110px;
-      left: 35%;
-      top: 111%;
-      background-color: transparent;
-      border-radius: 50% 50% 50% 90%;
-      border: 8px solid;
-      border-color: transparent transparent rgb(3, 95, 24) transparent;
-      transform: rotate(75deg)
-    }
-
-    .stem2 {
-      position: absolute;
-      height: 240px;
-      width: 180px;
-      left: 25.5%;
-      top: 20%;
-      background-color: transparent;
-      border-radius: 5% 90% 0 80%;
-      border: 6px solid;
-      border-color: transparent rgb(5, 113, 10) rgb(2, 104, 26) transparent;
-      transform: rotate(47deg)
-    }
-
-    .leaf1 {
-      position: absolute;
-      height: 40px;
-      width: 44px;
-      transform: translate(-50%, -50%) rotate(30deg);
-      left: 65%;
-      top: 74%;
-      background-color: rgb(1, 218, 81);
-      border-radius: 0 100px 0 100px;
-    }
-
-    .leaf2 {
-      position: absolute;
-      height: 60px;
-      width: 70px;
-      transform: translate(-50%, -50%) rotate(-8deg);
-      left: 34%;
-      top: 119%;
-      background-color: rgb(7, 167, 66);
-      border-radius: 0 100px 0 100px;
-    }
-
-    .leaf3 {
-      position: absolute;
-      height: 60px;
-      width: 60px;
-      transform: translate(-50%, -50%) rotate(130deg);
-      left: 67%;
-      top: 102%;
-      background-color: rgb(7, 167, 66);
-      border-radius: 0 100px 0 100px;
+  @media only screen and (min-width: 700px) {
+    .container {
+      transform: translate(-50%, -50%) scale(1.2);
     }
   }
 }

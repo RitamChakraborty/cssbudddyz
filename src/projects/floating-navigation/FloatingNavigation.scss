@@ -1,12 +1,15 @@
 #FloatingNavigation {
   height: 100vh;
-  background: lightcyan;
+  background: #eeeeee;
 
   .container {
+    height: 100vh;
     display: flex;
+    padding-bottom: 2rem;
   }
 
   nav {
+    height: max-content;
     width: 6rem;
     display: flex;
     flex-direction: column;
@@ -30,13 +33,16 @@
   }
 
   section {
-    margin: 1rem 5rem 1rem 2rem;
+    flex-grow: 1;
+    height: 100%;
+    margin: 1rem 1rem 1rem 2rem;
     padding: 3rem;
     line-height: 1.5rem;
     letter-spacing: 1px;
     border-radius: 0.5rem;
     background-color: white;
     z-index: 3;
+    overflow-y: scroll;
   }
 
   section article {
@@ -81,7 +87,7 @@
 
   .corner .corner-1 {
     border-top-right-radius: 50%;
-    background: lightcyan;
+    background: #eeeeee;
   }
 
   .corner .corner-2 {
@@ -96,12 +102,12 @@
 
   .corner .corner-4 {
     border-bottom-right-radius: 50%;
-    background-color: lightcyan;
+    background-color: #eeeeee;
   }
 
   .corner .corner-5 {
     border-bottom-right-radius: 50%;
-    background: lightcyan;
+    background: #eeeeee;
   }
 
   .corner .corner-6 {
@@ -116,7 +122,7 @@
 
   .corner .corner-8 {
     border-top-right-radius: 50%;
-    background-color: lightcyan;
+    background-color: #eeeeee;
   }
 
   .selector .selector-container {

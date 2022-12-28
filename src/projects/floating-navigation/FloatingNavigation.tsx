@@ -13,7 +13,8 @@ export default function FloatingNavigation() {
             nemo nesciunt nihil nisi numquam perspiciatis, praesentium quaerat quidem repellat repellendus rerum
             similique sunt tempore veritatis voluptas voluptatem?
 
-            Accusantium animi, excepturi explicabo maxime obcaecati ratione tenetur vel! Ab            aliquam ea expedita id ipsum laboriosam maiores natus nobis nostrum, numquam obcaecati odio porro quasi
+            Accusantium animi, excepturi explicabo maxime obcaecati ratione tenetur vel! Aliquam ea expedita id ipsum 
+            laboriosam maiores natus nobis nostrum, numquam obcaecati odio porro quasi
             repellendus soluta sunt ut voluptatibus voluptatum? Autem, blanditiis delectus ea inventore nam nobis
             perferendis placeat provident quidem tempore. A ad amet assumenda atque consectetur, corporis error et ex
             impedit laudantium nesciunt omnis quas quo quod rem repellendus rerum similique, sit. Adipisci assumenda

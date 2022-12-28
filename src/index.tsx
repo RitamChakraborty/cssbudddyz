@@ -7,7 +7,7 @@ import Red from "./projects/red/Red";
 import Eye from "./projects/eye/Eye";
 import BrushCursor from "./projects/brush-cursor/BrushCursor";
 import Eight from "./projects/eight/Eight";
-import SlightlySmiling from "./projects/evil-smile/SlightlySmiling";
+import SlightlySmiling from "./projects/slightly-smiling/SlightlySmiling";
 import FloatingNavigation from "./projects/floating-navigation/FloatingNavigation";
 import Switch from "./projects/switch/Switch";
 import Pacman from "./projects/pacman/Pacman";

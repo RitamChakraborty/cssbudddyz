@@ -9,6 +9,7 @@ export default function Eight() {
                 <div class="half-circle b b2"></div>
                 <div class="half-circle c2"></div>
             </div>
+            <p>HOVER</p>
         </div>
     )
 }

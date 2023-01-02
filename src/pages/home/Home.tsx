@@ -1,32 +1,67 @@
-import Nav from "../../components/Nav";
-import {A} from "@solidjs/router";
 import './Home.scss';
+import {createSignal, For} from "solid-js";
 
 export default function Home() {
+    const projectsUrls: readonly Project[] = [
+        {endpoint: '/clock', codepenSlug: 'xxJZapm'},
+        {codepenSlug: 'oNwqNgy', endpoint: 'switch'},
+        {codepenSlug: 'RwgMVZQ', endpoint: 'blink'},
+        {codepenSlug: 'YzQJrXB', endpoint: 'eye'},
+        {codepenSlug: 'XWBXMpY', endpoint: 'santa'},
+        {codepenSlug: 'mdjVjZY', endpoint: 'bee'},
+        {codepenSlug: 'poZgOyP', endpoint: 'brush-cursor'},
+        {codepenSlug: 'eYjJLWM', endpoint: 'butterfly'},
+        {codepenSlug: 'xxJZapm', endpoint: 'clock'},
+        {codepenSlug: 'zYLrJjm', endpoint: 'eight'},
+        {codepenSlug: 'wvxMEXg', endpoint: 'slightly-smiling'},
+        {codepenSlug: 'mdjVGYE', endpoint: 'floating-navigation'},
+        {codepenSlug: 'qBybMeW', endpoint: 'pacman'},
+        {codepenSlug: 'wvxMYBr', endpoint: 'red'},
+        {codepenSlug: 'poZgxJZ', endpoint: 'ripple'},
+        {codepenSlug: 'KKBVGdB', endpoint: 'rocket'},
+        {codepenSlug: 'eYjJPZX', endpoint: 'rolex'},
+        {codepenSlug: 'RwBreVp', endpoint: 'smile-injection'}
+    ];
+    const n = projectsUrls.length;
+    const [currentIndex] = createSignal<number>(n / 2);
+
+    function createStyleForCard(index: number) {
+        let marginLeft = '';
+        let marginRight = '';
+        let zIndex = n;
+        let transform = 'perspective(1000px)';
+
+        if (index === 0) {
+            marginLeft = `calc(50vw - ((var(--card-width) / 2) * ${currentIndex() + 1}))`;
+        }
+
+        if (index < currentIndex()) {
+            marginRight = '-250px';
+            zIndex = n - (currentIndex() - index);
+            transform += ' rotateY(30deg) scale(0.8)';
+        } else if (index > currentIndex()) {
+            marginLeft = '-250px';
+            zIndex = n - index;
+            transform += ' rotateY(-30deg) scale(0.8)';
+        }
+
+        return {
+            "margin-left": marginLeft,
+            "margin-right": marginRight,
+            "z-index": zIndex,
+            transform: transform,
+        }
+    }
+
     return (
         <div id="Home">
-                <Nav/>
-                A place to showcase all of ours css projects
-                <ul>
-                        <li><A href="/">Home</A></li>
-                        <li><A href="/red">Red</A></li>
-                        <li><A href="/bee">Bee</A></li>
-                        <li><A href="/blink">Blink</A></li>
-                        <li><A href="/eye">Eye</A></li>
-                        <li><A href="/brush-cursor">Brush Cursor</A></li>
-                        <li><A href="/eight">Eight</A></li>
-                        <li><A href="/slightly-smiling">Slightly Smiling</A></li>
-                        <li><A href="/floating-navigation">Floating Navigation</A></li>
-                        <li><A href="/switch">Switch</A></li>
-                        <li><A href="/pacman">Pacman</A></li>
-                        <li><A href="/rolex">Rolex</A></li>
-                        <li><A href="/smile-injection">Smile Injection</A></li>
-                        <li><A href="/santa">Santa</A></li>
-                        <li><A href="/butterfly">Butterfly</A></li>
-                        <li><A href="/ripple">Ripple</A></li>
-                        <li><A href="/clock">Clock</A></li>
-                        <li><A href="/rocket">Rocket</A></li>
-                </ul>
+            <div class="container">
+                <For<Project> each={projectsUrls}>{(project, index) =>
+                    <div class="card" style={createStyleForCard(index())}>
+                        {project.codepenSlug}
+                    </div>
+                }</For>
+            </div>
         </div>
     );
 }

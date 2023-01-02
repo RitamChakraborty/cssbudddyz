@@ -1,5 +1,6 @@
 import './Home.scss';
 import {createSignal, For} from "solid-js";
+import Header from "../../components/header/Header";
 
 export default function Home() {
     const projectsUrls: readonly Project[] = [
@@ -55,6 +56,7 @@ export default function Home() {
 
     return (
         <div id="Home">
+            <Header/>
             <div class="container">
                 <For<Project> each={projectsUrls}>{(project, index) =>
                     <div class="card" style={createStyleForCard(index())}>

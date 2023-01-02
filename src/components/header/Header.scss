@@ -1,0 +1,13 @@
+#Header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  header {
+    max-width: 1080px;
+    padding: 0 1rem;
+    font-family: 'Tourney', cursive;
+    font-size: xxx-large;
+    color: var(--clr-secondar);
+  }
+}

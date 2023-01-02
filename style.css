@@ -1,10 +1,16 @@
 :root {
     --card-height: 600px;
     --card-width: 500px;
+    --clr-primary: #efefef;
+    --clr-secondar: #555555;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: var(--clr-primary);
 }

@@ -1,0 +1,17 @@
+#Projects {
+  .container {
+    max-width: 100vw;
+    display: flex;
+    margin: 2rem auto;
+    overflow: hidden;
+
+    .card {
+      height: var(--card-height);
+      min-width: var(--card-width);
+      transform-style: preserve-3d;
+      background: lightblue;
+      transition: 400ms ease-in-out;
+      border: solid;
+    }
+  }
+}

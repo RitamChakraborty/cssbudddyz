@@ -1,13 +1,14 @@
 #Header {
-  height: 5rem;
+  margin-top: clamp(1rem, 5vw, 5rem);
   display: flex;
   align-items: center;
+  justify-content: center;
 
   header {
-    max-width: 1080px;
     padding: 0 1rem;
     font-family: 'Tourney', cursive;
-    font-size: xxx-large;
+    font-size: clamp(3rem, 10vw, 5rem);
     color: var(--secondary);
+    text-align: center;
   }
 }

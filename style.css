@@ -1,8 +1,9 @@
 :root {
-    --card-height: 400px;
+    --card-height: 450px;
     --card-width: 500px;
-    --clr-primary: #C3F8FF;
-    --clr-secondar: #555555;
+    --primary: #F8EDE3;
+    --secondary: #85586F;
+    --accent: #D0B8A8;
 }
 
 * {
@@ -12,5 +13,5 @@
 }
 
 body {
-    background: var(--clr-primary);
+    background: var(--primary);
 }

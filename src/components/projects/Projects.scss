@@ -2,6 +2,7 @@
   flex-grow: 1;
   display: grid;
   place-items: center;
+  position: relative;
 
   .container {
     max-width: 100vw;
@@ -15,5 +16,52 @@
       transition: 400ms ease-in-out;
       padding: 2rem 1rem;
     }
+  }
+
+  .scroll {
+    position: absolute;
+    height: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+
+    button {
+      padding: 2rem 1rem;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+      border: none;
+      border-radius: 1rem;
+      box-shadow: rgb(44, 62, 80, 0.3) 0 0 10px 5px;
+      opacity: 0;
+      transition: 200ms ease-out;
+      animation: fade-out 3s linear;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @keyframes fade-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      i {
+        color: var(--primary);
+        font-size: clamp(3rem, 10vw, 5rem);
+      }
+    }
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
   }
 }

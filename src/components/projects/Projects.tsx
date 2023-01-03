@@ -63,6 +63,12 @@ export default function Projects() {
                     </div>
                 }</For>
             </div>
+            <div class="scroll left">
+                <button><i class="fa-solid fa-chevron-left"></i></button>
+            </div>
+            <div class="scroll right">
+                <button><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
     )
 }

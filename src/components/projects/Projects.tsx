@@ -1,11 +1,10 @@
 import './Projects.scss';
-import {createSignal, For} from "solid-js";
+import {createSignal, For, onMount} from "solid-js";
 import Project from "../project/Project";
 import ProjectModel from "../../models/ProjectModel";
 
 export default function Projects() {
     const projectsUrls: readonly ProjectModel[] = [
-        {endpoint: '/clock', codepenSlug: 'xxJZapm'},
         {codepenSlug: 'oNwqNgy', endpoint: 'switch'},
         {codepenSlug: 'RwgMVZQ', endpoint: 'blink'},
         {codepenSlug: 'YzQJrXB', endpoint: 'eye'},
@@ -24,7 +23,17 @@ export default function Projects() {
         {codepenSlug: 'RwBreVp', endpoint: 'smile-injection'}
     ];
     const n = projectsUrls.length;
-    const [currentIndex, setCurrentIndex] = createSignal<number>(Math.floor(n / 2));
+    const [currentIndex, setCurrentIndex] = createSignal<number>(0);
+
+    onMount(() => {
+        const middle = Math.floor(n / 2);
+        const interval = setInterval(() => {
+            if (currentIndex() === middle - 1) {
+                clearInterval(interval);
+            }
+            scrollRight();
+        }, 300);
+    })
 
     function createStyleForCard(index: number) {
         let marginLeft = '';

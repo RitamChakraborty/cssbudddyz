@@ -5,7 +5,7 @@
   position: relative;
 
   .container {
-    max-width: 100vw;
+    width: 100%;
     display: flex;
     overflow: hidden;
 
@@ -32,7 +32,7 @@
       backdrop-filter: blur(5px);
       border: none;
       border-radius: 1rem;
-      box-shadow: rgb(44, 62, 80, 0.3) 0 0 10px 5px;
+      box-shadow: rgb(44, 62, 80, 0.5) 0 0 10px 5px;
       opacity: 0;
       transition: 200ms ease-out;
       animation: fade-out 3s linear;
@@ -51,7 +51,7 @@
       }
 
       i {
-        color: var(--primary);
+        color: var(--secondary);
         font-size: clamp(3rem, 10vw, 5rem);
       }
     }

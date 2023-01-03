@@ -24,7 +24,7 @@ export default function Projects() {
         {codepenSlug: 'RwBreVp', endpoint: 'smile-injection'}
     ];
     const n = projectsUrls.length;
-    const [currentIndex] = createSignal<number>(Math.floor(n / 2));
+    const [currentIndex, setCurrentIndex] = createSignal<number>(Math.floor(n / 2));
 
     function createStyleForCard(index: number) {
         let marginLeft = '';
@@ -54,6 +54,22 @@ export default function Projects() {
         }
     }
 
+    function scrollLeft() {
+        if (currentIndex() === 0) {
+            return;
+        }
+
+        setCurrentIndex((value) => value - 1);
+    }
+
+    function scrollRight() {
+        if (currentIndex() === n - 1) {
+            return;
+        }
+
+        setCurrentIndex((value) => value + 1);
+    }
+
     return (
         <div id="Projects">
             <div class="container">
@@ -64,10 +80,14 @@ export default function Projects() {
                 }</For>
             </div>
             <div class="scroll left">
-                <button><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick={scrollLeft}>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
             </div>
             <div class="scroll right">
-                <button><i class="fa-solid fa-chevron-right"></i></button>
+                <button onclick={scrollRight}>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     )

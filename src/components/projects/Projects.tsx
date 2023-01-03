@@ -16,7 +16,6 @@ export default function Projects() {
         {codepenSlug: 'xxJZapm', endpoint: 'clock'},
         {codepenSlug: 'zYLrJjm', endpoint: 'eight'},
         {codepenSlug: 'wvxMEXg', endpoint: 'slightly-smiling'},
-        {codepenSlug: 'mdjVGYE', endpoint: 'floating-navigation'},
         {codepenSlug: 'qBybMeW', endpoint: 'pacman'},
         {codepenSlug: 'wvxMYBr', endpoint: 'red'},
         {codepenSlug: 'poZgxJZ', endpoint: 'ripple'},
@@ -25,7 +24,7 @@ export default function Projects() {
         {codepenSlug: 'RwBreVp', endpoint: 'smile-injection'}
     ];
     const n = projectsUrls.length;
-    const [currentIndex] = createSignal<number>(n / 2);
+    const [currentIndex] = createSignal<number>(Math.floor(n / 2));
 
     function createStyleForCard(index: number) {
         let marginLeft = '';

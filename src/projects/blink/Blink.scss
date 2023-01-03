@@ -1,6 +1,7 @@
 #Blink {
   height: 100vh;
   box-sizing: border-box;
+  background: #F1F4DF;
 
   .eyes {
     width: 100%;
@@ -56,7 +57,7 @@
   .lid1 {
     top: -10%;
     left: -10%;
-    background: white;
+    background: #F1F4DF;
     border-left: 5px solid rgba(0, 0, 0, 0.5);
     border-top: 5px solid rgba(0, 0, 0, 0.5);
   }

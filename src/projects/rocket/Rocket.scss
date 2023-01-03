@@ -1,12 +1,12 @@
 #Rocket {
   height: 100vh;
   overflow: hidden;
+  background: #1CD6CE;
 
   .rocket-container {
     height: 100%;
     width: 100%;
     inset: 0;
-    background: #efefef;
     display: grid;
     place-items: center;
   }
@@ -15,7 +15,7 @@
     position: relative;
     height: 80vh;
     width: 300px;
-    background: #13515c;
+    background: #293462;
     border-radius: 1rem;
     display: grid;
   }

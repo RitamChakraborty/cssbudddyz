@@ -9,9 +9,8 @@
       height: var(--card-height);
       min-width: var(--card-width);
       transform-style: preserve-3d;
-      background: lightblue;
       transition: 400ms ease-in-out;
-      border: solid;
+      padding: 1rem;
     }
   }
 }

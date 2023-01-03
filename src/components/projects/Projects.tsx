@@ -1,8 +1,10 @@
 import './Projects.scss';
 import {createSignal, For} from "solid-js";
+import Project from "../project/Project";
+import ProjectModel from "../../models/ProjectModel";
 
 export default function Projects() {
-    const projectsUrls: readonly Project[] = [
+    const projectsUrls: readonly ProjectModel[] = [
         {endpoint: '/clock', codepenSlug: 'xxJZapm'},
         {codepenSlug: 'oNwqNgy', endpoint: 'switch'},
         {codepenSlug: 'RwgMVZQ', endpoint: 'blink'},
@@ -56,9 +58,9 @@ export default function Projects() {
     return (
         <div id="Projects">
             <div class="container">
-                <For<Project> each={projectsUrls}>{(project, index) =>
+                <For<ProjectModel> each={projectsUrls}>{(project, index) =>
                     <div class="card" style={createStyleForCard(index())}>
-                        {project.codepenSlug}
+                        <Project projectModel={project}/>
                     </div>
                 }</For>
             </div>

@@ -38,11 +38,11 @@ export default function Projects() {
         }
 
         if (index < currentIndex()) {
-            marginRight = '-250px';
+            marginRight = 'calc(var(--card-width) / 2 * -1)';
             zIndex = n - (currentIndex() - index);
             transform += ' rotateY(30deg) scale(0.8)';
         } else if (index > currentIndex()) {
-            marginLeft = '-250px';
+            marginLeft = 'calc(var(--card-width) / 2 * -1)';
             zIndex = n - index;
             transform += ' rotateY(-30deg) scale(0.8)';
         }

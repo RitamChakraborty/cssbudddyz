@@ -1,7 +1,7 @@
 :root {
-    --card-height: 600px;
+    --card-height: 400px;
     --card-width: 500px;
-    --clr-primary: lightblue;
+    --clr-primary: #C3F8FF;
     --clr-secondar: #555555;
 }
 

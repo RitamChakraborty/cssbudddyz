@@ -7,7 +7,13 @@ export default function Project(projectProp: ProjectProp) {
 
     return (
         <div id="Project">
-            {projectModel.codepenSlug}
+            <div
+                class="project-overview"
+                style={{
+                    "background-image": `url(https://shots.codepen.io/RitamChakraborty/pen/${projectModel.codepenSlug}-512.webp)`
+                }}
+            ></div>
+            <div class="footer"></div>
         </div>
     );
 }

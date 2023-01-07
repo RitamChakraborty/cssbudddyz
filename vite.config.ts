@@ -3,7 +3,7 @@ import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig({
   plugins: [solidPlugin()],
-  base: './',
+  base: 'https://ritamchakraborty.github.io/cssbudddyz/',
   server: {
     port: 3000,
   },

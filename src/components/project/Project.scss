@@ -50,6 +50,12 @@
         display: grid;
         place-items: center;
         box-shadow: var(--shadow) 0 0 0.5rem 0.25rem;
+        transition: 100ms;
+
+        &:active {
+          transform: scale(0.9);
+          filter: brightness(90%);
+        }
 
         i {
           font-size: 1.25rem;

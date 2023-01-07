@@ -6,7 +6,7 @@ export default function Project(projectProp: ProjectProp) {
     const projectModel: ProjectModel = projectProp.projectModel;
 
     function handleCodepen() {
-        open(`https://codepen.io/RitamChakraborty/pen/${projectModel.codepenSlug}`);
+        open(`https://codepen.io/RitamChakraborty/pen/${projectModel.codepenSlug}?layout=left&editors=1100`);
     }
 
     function handlePreview() {

@@ -1,14 +1,14 @@
 #ThemeSwitcher {
   position: absolute;
-  height: 10vw;
+  height: clamp(4rem, 10vw, 8rem);
   aspect-ratio: 1;
-  right: -5vw;
-  top: -5vw;
+  right: clamp(-4rem, -5vw, -2rem);
+  top: clamp(-4rem, -5vw, -2rem);
   border-radius: 50%;
-  border: 2px solid var(--accent);
+  transition: 1s ease-in-out;
 
-  .icon {
-    font-size: clamp(1rem, 3vw, 4rem);
+  .theme {
+    font-size: clamp(1.5rem, 3vw, 4rem);
     color: var(--secondary);
     position: absolute;
     display: grid;
@@ -22,6 +22,7 @@
     &.dark {
       right: 0;
       top: 0;
+      transform: rotate(180deg);
     }
   }
 }

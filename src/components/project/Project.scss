@@ -1,12 +1,13 @@
 #Project {
   height: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--light-background);
   backdrop-filter: blur(5px);
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 10px 20px 0;
+  box-shadow: var(--shadow) 0 10px 20px 0;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
+  border: 2px solid var(--accent);
 
   .project-overview {
     width: calc(100% - 2rem);
@@ -20,11 +21,11 @@
 
   .footer {
     flex-grow: 1;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--light-background);
     backdrop-filter: blur(10px);
     border-radius: 2rem 2rem 1rem 1rem;
     margin-top: -1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -3px 20px;
+    box-shadow: var(--shadow) 0 -3px 20px;
     padding: 1.5rem;
 
     .title {
@@ -48,7 +49,7 @@
         backdrop-filter: blur(5px);
         display: grid;
         place-items: center;
-        box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.5rem 0.25rem;
+        box-shadow: var(--shadow) 0 0 0.5rem 0.25rem;
 
         i {
           font-size: 1.25rem;

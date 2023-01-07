@@ -1,9 +1,20 @@
 :root {
-    --card-height: 450px;
-    --card-width: 500px;
-    --primary: #F8EDE3;
-    --secondary: #85586F;
-    --accent: #D0B8A8;
+    --card-height: clamp(300px, 60vh, 450px);
+    --card-width: clamp(200px, 80vw, 500px);
+
+    --primary: #e1e1e1;
+    --secondary: #555555;
+    --accent: lightblue;
+    --project-background: rgba(255, 255, 255, 0.1);
+    --footer-background: rgba(255, 255, 255, 0.3);
+    --shadow: rgba(0, 0, 0, 0.2);
+
+    /*--primary: #162447;*/
+    /*--secondary: #DBCBBD;*/
+    /*--accent: #1414a4;*/
+    /*--light-background: rgba(0, 0, 0, 0.1);*/
+    /*--dark-background: rgba(0, 0, 0, 0.3);*/
+    /*--shadow: rgba(255, 255, 255, 0.2);*/
 }
 
 * {

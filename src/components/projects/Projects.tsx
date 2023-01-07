@@ -24,6 +24,7 @@ export default function Projects() {
     ];
     const n = projectsUrls.length;
     const [currentIndex, setCurrentIndex] = createSignal<number>(0);
+    let projects;
 
     onMount(() => {
         const middle = Math.floor(n / 2);
@@ -33,6 +34,26 @@ export default function Projects() {
             }
             scrollRight();
         }, 300);
+
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        projects.addEventListener('touchstart', function (event: TouchEvent) {
+            touchstartX = event.touches[0].screenX;
+        }, false);
+
+        projects.addEventListener('touchend', function (event: TouchEvent) {
+            touchendX = event.changedTouches[0].screenX;
+            handleGesture();
+        }, false);
+
+        function handleGesture() {
+            if (touchendX > touchstartX) {
+                scrollLeft()
+            } else if (touchendX < touchstartX) {
+                scrollRight()
+            }
+        }
     })
 
     function createStyleForCard(index: number) {
@@ -80,7 +101,7 @@ export default function Projects() {
     }
 
     return (
-        <div id="Projects">
+        <div id="Projects" ref={projects}>
             <div class="container">
                 <For<ProjectModel> each={projectsUrls}>{(project, index) =>
                     <div class="card" style={createStyleForCard(index())}>

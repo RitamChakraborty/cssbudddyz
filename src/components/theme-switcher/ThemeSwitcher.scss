@@ -1,0 +1,27 @@
+#ThemeSwitcher {
+  position: absolute;
+  height: 10vw;
+  aspect-ratio: 1;
+  right: -5vw;
+  top: -5vw;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+
+  .icon {
+    font-size: clamp(1rem, 3vw, 4rem);
+    color: var(--secondary);
+    position: absolute;
+    display: grid;
+    place-items: center;
+
+    &.light {
+      left: 0;
+      bottom: 0;
+    }
+
+    &.dark {
+      right: 0;
+      top: 0;
+    }
+  }
+}

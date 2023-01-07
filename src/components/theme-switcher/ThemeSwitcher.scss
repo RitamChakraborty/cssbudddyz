@@ -6,6 +6,10 @@
   top: clamp(-4rem, -5vw, -2rem);
   border-radius: 50%;
   transition: 1s ease-in-out;
+  background: var(--dark-background);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(15px);
+  border: 2px dashed var(--accent);
 
   .theme {
     font-size: clamp(1.5rem, 3vw, 4rem);

@@ -1,12 +1,13 @@
 import "./ThemeSwitcher.scss";
 import {createSignal} from "solid-js";
+import {changeAppTheme} from "../../service/ThemeSwitcherService";
 
 export default function ThemeSwitcher() {
     const [angle, setAngle] = createSignal<number>(0);
 
     function changeTheme() {
         setAngle((value) => (value + 0.18));
-        console.log(angle());
+        changeAppTheme();
     }
 
     return (

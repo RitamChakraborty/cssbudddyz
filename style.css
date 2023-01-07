@@ -5,22 +5,25 @@
     --primary: #e1e1e1;
     --secondary: #555555;
     --accent: lightblue;
-    --project-background: rgba(255, 255, 255, 0.1);
-    --footer-background: rgba(255, 255, 255, 0.3);
+    --light-background: rgba(255, 255, 255, 0.1);
+    --dark-background: rgba(255, 255, 255, 0.3);
     --shadow: rgba(0, 0, 0, 0.2);
+}
 
-    /*--primary: #162447;*/
-    /*--secondary: #DBCBBD;*/
-    /*--accent: #1414a4;*/
-    /*--light-background: rgba(0, 0, 0, 0.1);*/
-    /*--dark-background: rgba(0, 0, 0, 0.3);*/
-    /*--shadow: rgba(255, 255, 255, 0.2);*/
+.dark-theme {
+    --primary: #162447;
+    --secondary: #DBCBBD;
+    --accent: #1414a4;
+    --light-background: rgba(0, 0, 0, 0.1);
+    --dark-background: rgba(0, 0, 0, 0.3);
+    --shadow: rgba(255, 255, 255, 0.2);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 500ms ease-in-out;
 }
 
 body {

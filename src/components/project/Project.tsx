@@ -1,6 +1,7 @@
 import ProjectProp from "../../models/prop/ProjectProp";
 import ProjectModel from "../../models/ProjectModel";
 import "./Project.scss";
+import IconButton from "../icon-button/IconButton";
 
 export default function Project(projectProp: ProjectProp) {
     const projectModel: ProjectModel = projectProp.projectModel;
@@ -24,8 +25,8 @@ export default function Project(projectProp: ProjectProp) {
             <div class="footer">
                 <div class="title">{projectModel.codepenSlug}</div>
                 <div class="nav">
-                    <button onclick={handleCodepen}><i class="fa-brands fa-codepen"></i></button>
-                    <button onclick={handlePreview}><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                    <IconButton icon="fa-brands fa-codepen" onPressed={handleCodepen}/>
+                    <IconButton icon="fa-solid fa-arrow-up-right-from-square" onPressed={handlePreview}/>
                 </div>
             </div>
         </div>

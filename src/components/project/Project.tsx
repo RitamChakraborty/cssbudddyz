@@ -2,16 +2,18 @@ import ProjectProp from "../../models/prop/ProjectProp";
 import ProjectModel from "../../models/ProjectModel";
 import "./Project.scss";
 import IconButton from "../icon-button/IconButton";
+import {useNavigate} from "@solidjs/router";
 
 export default function Project(projectProp: ProjectProp) {
     const projectModel: ProjectModel = projectProp.projectModel;
+    const navigate = useNavigate();
 
     function handleCodepen() {
         open(`https://codepen.io/RitamChakraborty/pen/${projectModel.codepenSlug}?layout=left&editors=1100`);
     }
 
     function handlePreview() {
-        open(`/${projectModel.endpoint}`);
+        navigate(projectModel.endpoint);
     }
 
     return (

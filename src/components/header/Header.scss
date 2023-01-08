@@ -1,8 +1,10 @@
 #Header {
-  margin-top: clamp(1rem, 5vw, 5rem);
+  padding-top: clamp(1rem, 5vw, 5rem);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 
   header {
     padding: 0 1rem;

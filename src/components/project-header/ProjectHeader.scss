@@ -1,5 +1,43 @@
 #ProjectHeader {
+  $height: calc(clamp(2rem, 10vw, 3rem) + 2rem);
   position: absolute;
-  font-size: clamp(2rem, 10vw, 3rem);
+  inset: 0;
+  top: calc(#{$height} * -1);
+  height: $height;
+  padding: 0 1rem;
+  width: 100%;
   font-family: 'Tourney', cursive;
+  background-color: var(--dark-background);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 1rem var(--shadow);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 2rem 2rem;
+  z-index: 1000;
+
+  &:hover {
+    top: 0;
+  }
+
+  header {
+    flex-grow: 1;
+    text-align: center;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .pull-down {
+    height: 1.5rem;
+    width: 2rem;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: -1.5rem;
+    background-color: var(--dark-background);
+    font-size: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: grid;
+    place-items: center;
+    color: var(--secondary);
+  }
 }

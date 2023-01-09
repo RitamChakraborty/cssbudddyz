@@ -3,6 +3,10 @@
   overflow: hidden;
   background: #1CD6CE;
 
+  * {
+    transition: none;
+  }
+
   .rocket-container {
     height: 100%;
     width: 100%;

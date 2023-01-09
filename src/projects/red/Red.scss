@@ -16,33 +16,6 @@
     width: 500px;
   }
 
-  @keyframes move {
-    0% {
-      top: 0;
-      left: 0;
-    }
-
-    25% {
-      top: -10%;
-      left: 10%;
-    }
-
-    50% {
-      top: -20%;
-      left: 20%;
-    }
-
-    75% {
-      top: -10%;
-      left: 30%;
-    }
-
-    100% {
-      top: 0;
-      left: 40%;
-    }
-  }
-
   .red * {
     position: absolute;
   }

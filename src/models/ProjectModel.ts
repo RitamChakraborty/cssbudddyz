@@ -1,4 +1,7 @@
 export default interface ProjectModel {
-    endpoint: string;
+    title?: string;
     codepenSlug: string;
+    endpoint: string;
+    component: any;
+    componentName: string;
 }

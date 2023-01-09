@@ -2,27 +2,10 @@ import './Projects.scss';
 import {createSignal, For, onMount} from "solid-js";
 import Project from "../project/Project";
 import ProjectModel from "../../models/ProjectModel";
+import {PROJECT_MODELS} from "../../config/Config";
 
 export default function Projects() {
-    const projectsUrls: readonly ProjectModel[] = [
-        {codepenSlug: 'oNwqNgy', endpoint: 'switch'},
-        {codepenSlug: 'RwgMVZQ', endpoint: 'blink'},
-        {codepenSlug: 'YzQJrXB', endpoint: 'eye'},
-        {codepenSlug: 'XWBXMpY', endpoint: 'santa'},
-        {codepenSlug: 'mdjVjZY', endpoint: 'bee'},
-        {codepenSlug: 'poZgOyP', endpoint: 'brush-cursor'},
-        {codepenSlug: 'eYjJLWM', endpoint: 'butterfly'},
-        {codepenSlug: 'xxJZapm', endpoint: 'clock'},
-        {codepenSlug: 'zYLrJjm', endpoint: 'eight'},
-        {codepenSlug: 'wvxMEXg', endpoint: 'slightly-smiling'},
-        {codepenSlug: 'qBybMeW', endpoint: 'pacman'},
-        {codepenSlug: 'wvxMYBr', endpoint: 'red'},
-        {codepenSlug: 'poZgxJZ', endpoint: 'ripple'},
-        {codepenSlug: 'KKBVGdB', endpoint: 'rocket'},
-        {codepenSlug: 'eYjJPZX', endpoint: 'rolex'},
-        {codepenSlug: 'RwBreVp', endpoint: 'smile-injection'}
-    ];
-    const n = projectsUrls.length;
+    const n = PROJECT_MODELS.length;
     const [currentIndex, setCurrentIndex] = createSignal<number>(0);
     let projects;
 
@@ -103,7 +86,7 @@ export default function Projects() {
     return (
         <div id="Projects" ref={projects}>
             <div class="container">
-                <For<ProjectModel> each={projectsUrls}>{(project, index) =>
+                <For<ProjectModel> each={PROJECT_MODELS}>{(project, index) =>
                     <div class="card" style={createStyleForCard(index())}>
                         <Project projectModel={project}/>
                     </div>
@@ -114,7 +97,7 @@ export default function Projects() {
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
             </div>
-            <div class="scroll right">
+            <div class="scroll right">.
                 <button onclick={scrollRight}>
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>

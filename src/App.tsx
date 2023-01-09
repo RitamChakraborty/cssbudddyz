@@ -13,7 +13,7 @@ export default function App() {
         ...PROJECT_MODELS.map((projectModel) => {
             return {
                 path: `/${projectModel.endpoint}`,
-                component: lazyImport(`./projects/${projectModel.endpoint}/${projectModel.title}`)
+                component: lazyImport(`./projects/${projectModel.endpoint}/${projectModel.componentName}`)
             }
         })
     ];

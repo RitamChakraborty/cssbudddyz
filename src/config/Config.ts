@@ -25,7 +25,7 @@ const PROJECT_MODELS: ProjectModel[] = [
         componentName: 'Switch'
     },
     {
-        title: 'Blinck',
+        title: 'Blink',
         codepenSlug: 'RwgMVZQ',
         endpoint: 'blink',
         component: Blink,

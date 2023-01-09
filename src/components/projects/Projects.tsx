@@ -10,13 +10,13 @@ export default function Projects() {
     let projects;
 
     onMount(() => {
-        const middle = Math.floor(n / 2);
-        const interval = setInterval(() => {
-            if (currentIndex() === middle - 1) {
-                clearInterval(interval);
-            }
-            scrollRight();
-        }, 300);
+        // const middle = Math.floor(n / 2);
+        // const interval = setInterval(() => {
+        //     if (currentIndex() === middle - 1) {
+        //         clearInterval(interval);
+        //     }
+        //     scrollRight();
+        // }, 300);
 
         let touchstartX = 0;
         let touchendX = 0;

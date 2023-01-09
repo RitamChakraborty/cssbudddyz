@@ -1,5 +1,6 @@
 import {onMount} from "solid-js";
 import './SmileInjection.scss';
+import ProjectHeader from "../../components/project-header/ProjectHeader";
 
 export default function SmileInjection() {
     onMount(() => {
@@ -34,34 +35,37 @@ export default function SmileInjection() {
     });
 
     return (
-        <div id="SmileInjection">
-            <div class="container">
-                <div class="smiley">
-                    <div class="eyes">
-                        <div class="eye"></div>
-                        <div class="eye"></div>
-                    </div>
-                    <div id="mouth" class="mouth-smile"></div>
-                </div>
-                <div class="injection">
-                    <div class="needle"></div>
-                    <div class="syringe"></div>
-                    <div class="head"></div>
-                    <div class="pusher">
-                        <div class="liquid"></div>
-                        <div class="tip">
-                            <div class="tip-head"></div>
-                            <div class="strip"></div>
-                            <div class="space"></div>
-                            <div class="strip"></div>
-                            <div class="space"></div>
+        <>
+            <ProjectHeader/>
+            <div id="SmileInjection">
+                <div class="container">
+                    <div class="smiley">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
                         </div>
-                        <div class="handle"></div>
-                        <div class="handle-end"></div>
-                        <div class="push">PUSH</div>
+                        <div id="mouth" class="mouth-smile"></div>
+                    </div>
+                    <div class="injection">
+                        <div class="needle"></div>
+                        <div class="syringe"></div>
+                        <div class="head"></div>
+                        <div class="pusher">
+                            <div class="liquid"></div>
+                            <div class="tip">
+                                <div class="tip-head"></div>
+                                <div class="strip"></div>
+                                <div class="space"></div>
+                                <div class="strip"></div>
+                                <div class="space"></div>
+                            </div>
+                            <div class="handle"></div>
+                            <div class="handle-end"></div>
+                            <div class="push">PUSH</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

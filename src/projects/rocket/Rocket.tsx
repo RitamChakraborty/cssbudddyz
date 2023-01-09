@@ -1,5 +1,6 @@
 import './Rocket.scss';
 import {onMount} from "solid-js";
+import ProjectHeader from "../../components/project-header/ProjectHeader";
 
 export default function Rocket() {
     onMount(() => {
@@ -121,55 +122,58 @@ export default function Rocket() {
     });
 
     return (
-        <div id="Rocket">
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-            <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
-            <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet"/>
-            <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet"/>
-            <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
-                  rel="stylesheet"/>
-            <div class="rocket-container">
-                <div class="rocket-placeholder">
-                    <div class="ignition-countdown-container">
-                        <div class="ignition-countdown"></div>
-                    </div>
-                    <div class="boom">
-                        <p>BooM!</p>
-                    </div>
-                    <div class="anniversary-container">
-                        <div class="wish happy"></div>
-                        <div class="wish friendship"></div>
-                        <div class="wish anniversary"></div>
-                    </div>
-                    <div class="rocket">
-                        <div class="head"></div>
-                        <div class="body">
-                            <div class="stripes">
-                                <div class="stripe"></div>
-                                <div class="stripe"></div>
-                                <div class="stripe"></div>
-                                <div class="stripe"></div>
-                            </div>
-                            <div class="face">
-                                <div class="eyes">
-                                    <div class="eye eye-1"></div>
-                                    <div class="eye eye-2"></div>
-                                </div>
-                                <div class="mouth-container">
-                                    <div class="m mouth"></div>
-                                </div>
-                            </div>
+        <>
+            <ProjectHeader/>
+            <div id="Rocket">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+                <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
+                      rel="stylesheet"/>
+                <div class="rocket-container">
+                    <div class="rocket-placeholder">
+                        <div class="ignition-countdown-container">
+                            <div class="ignition-countdown"></div>
                         </div>
-                        <div class="tail"></div>
-                        <div class="ignition">
-                            <div class="fire fire1"></div>
-                            <div class="fire fire2"></div>
-                            <div class="fire fire3"></div>
+                        <div class="boom">
+                            <p>BooM!</p>
+                        </div>
+                        <div class="anniversary-container">
+                            <div class="wish happy"></div>
+                            <div class="wish friendship"></div>
+                            <div class="wish anniversary"></div>
+                        </div>
+                        <div class="rocket">
+                            <div class="head"></div>
+                            <div class="body">
+                                <div class="stripes">
+                                    <div class="stripe"></div>
+                                    <div class="stripe"></div>
+                                    <div class="stripe"></div>
+                                    <div class="stripe"></div>
+                                </div>
+                                <div class="face">
+                                    <div class="eyes">
+                                        <div class="eye eye-1"></div>
+                                        <div class="eye eye-2"></div>
+                                    </div>
+                                    <div class="mouth-container">
+                                        <div class="m mouth"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tail"></div>
+                            <div class="ignition">
+                                <div class="fire fire1"></div>
+                                <div class="fire fire2"></div>
+                                <div class="fire fire3"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

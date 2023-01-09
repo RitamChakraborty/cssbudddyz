@@ -49,7 +49,7 @@ const PROJECT_MODELS: ProjectModel[] = [
         title: 'Bee',
         codepenSlug: 'mdjVjZY',
         endpoint: 'bee', component: Bee,
-        componentName: 'bee'
+        componentName: 'Bee'
     },
     {
         title: 'Brush Cursor',

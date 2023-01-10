@@ -17,11 +17,17 @@ import SmileInjection from "../projects/smile-injection/SmileInjection";
 import ProjectModel from "../models/ProjectModel";
 
 const PROJECT_MODELS: ProjectModel[] = [
+
     {
-        title: 'Switch',
-        codepenSlug: 'oNwqNgy',
-        endpoint: 'switch',
-        component: Switch
+        title: 'Clock',
+        codepenSlug: 'xxJZapm',
+        endpoint: 'clock',
+        component: Clock
+    },
+    {
+        title: 'Rolex',
+        codepenSlug: 'eYjJPZX',
+        endpoint: 'rolex', component: Rolex
     },
     {
         title: 'Blink',
@@ -30,58 +36,16 @@ const PROJECT_MODELS: ProjectModel[] = [
         component: Blink
     },
     {
-        title: 'Eye',
-        codepenSlug: 'YzQJrXB',
-        endpoint: 'eye',
-        component: Eye
-    },
-    {
         title: 'Santa',
         codepenSlug: 'XWBXMpY',
         endpoint: 'santa',
         component: Santa
     },
     {
-        title: 'Bee',
-        codepenSlug: 'mdjVjZY',
-        endpoint: 'bee',
-        component: Bee
-    },
-    {
-        title: 'Brush Cursor',
-        codepenSlug: 'poZgOyP',
-        endpoint: 'brush-cursor',
-        component: BrushCursor
-    },
-    {
-        title: 'Butterfly',
-        codepenSlug: 'eYjJLWM',
-        endpoint: 'butterfly',
-        component: Butterfly
-    },
-    {
-        title: 'Clock',
-        codepenSlug: 'xxJZapm',
-        endpoint: 'clock',
-        component: Clock
-    },
-    {
-        title: 'Eight',
-        codepenSlug: 'zYLrJjm',
-        endpoint: 'eight',
-        component: Eight
-    },
-    {
-        title: 'Slightly Smiling',
-        codepenSlug: 'wvxMEXg',
-        endpoint: 'slightly-smiling',
-        component: SlightlySmiling
-    },
-    {
-        title: 'Pacman',
-        codepenSlug: 'qBybMeW',
-        endpoint: 'pacman',
-        component: Pacman
+        title: 'Eye',
+        codepenSlug: 'YzQJrXB',
+        endpoint: 'eye',
+        component: Eye
     },
     {
         title: 'Red',
@@ -90,10 +54,10 @@ const PROJECT_MODELS: ProjectModel[] = [
         component: Red
     },
     {
-        title: 'Ripple',
-        codepenSlug: 'poZgxJZ',
-        endpoint: 'ripple',
-        component: Ripple
+        title: 'Bee',
+        codepenSlug: 'mdjVjZY',
+        endpoint: 'bee',
+        component: Bee
     },
     {
         title: 'Rocket',
@@ -102,15 +66,52 @@ const PROJECT_MODELS: ProjectModel[] = [
         component: Rocket
     },
     {
-        title: 'Rolex',
-        codepenSlug: 'eYjJPZX',
-        endpoint: 'rolex', component: Rolex
+        title: 'Butterfly',
+        codepenSlug: 'eYjJLWM',
+        endpoint: 'butterfly',
+        component: Butterfly
+    },
+    {
+        title: 'Brush Cursor',
+        codepenSlug: 'poZgOyP',
+        endpoint: 'brush-cursor',
+        component: BrushCursor
+    },
+    {
+        title: 'Slightly Smiling',
+        codepenSlug: 'wvxMEXg',
+        endpoint: 'slightly-smiling',
+        component: SlightlySmiling
+    },
+    {
+        title: 'Eight',
+        codepenSlug: 'zYLrJjm',
+        endpoint: 'eight',
+        component: Eight
     },
     {
         title: 'Smile Injection',
         codepenSlug: 'RwBreVp',
         endpoint: 'smile-injection',
         component: SmileInjection
+    },
+    {
+        title: 'Pacman',
+        codepenSlug: 'qBybMeW',
+        endpoint: 'pacman',
+        component: Pacman
+    },
+    {
+        title: 'Ripple',
+        codepenSlug: 'poZgxJZ',
+        endpoint: 'ripple',
+        component: Ripple
+    },
+    {
+        title: 'Switch',
+        codepenSlug: 'oNwqNgy',
+        endpoint: 'switch',
+        component: Switch
     }
 ];
 

@@ -90,7 +90,7 @@ const PROJECT_MODELS: ProjectModel[] = [
         component: Red
     },
     {
-        title: 'Riplle',
+        title: 'Ripple',
         codepenSlug: 'poZgxJZ',
         endpoint: 'ripple',
         component: Ripple

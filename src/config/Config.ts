@@ -107,7 +107,7 @@ const PROJECT_MODELS: ProjectModel[] = [
         endpoint: 'rolex', component: Rolex
     },
     {
-        title: 'SmileInjection',
+        title: 'Smile Injection',
         codepenSlug: 'RwBreVp',
         endpoint: 'smile-injection',
         component: SmileInjection

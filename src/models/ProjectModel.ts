@@ -3,5 +3,4 @@ export default interface ProjectModel {
     codepenSlug: string;
     endpoint: string;
     component: any;
-    componentName: string;
 }

@@ -21,111 +21,96 @@ const PROJECT_MODELS: ProjectModel[] = [
         title: 'Switch',
         codepenSlug: 'oNwqNgy',
         endpoint: 'switch',
-        component: Switch,
-        componentName: 'Switch'
+        component: Switch
     },
     {
         title: 'Blink',
         codepenSlug: 'RwgMVZQ',
         endpoint: 'blink',
-        component: Blink,
-        componentName: 'Blink'
+        component: Blink
     },
     {
         title: 'Eye',
         codepenSlug: 'YzQJrXB',
         endpoint: 'eye',
-        component: Eye,
-        componentName: 'Eye'
+        component: Eye
     },
     {
         title: 'Santa',
         codepenSlug: 'XWBXMpY',
         endpoint: 'santa',
-        component: Santa,
-        componentName: 'Santa'
+        component: Santa
     },
     {
         title: 'Bee',
         codepenSlug: 'mdjVjZY',
-        endpoint: 'bee', component: Bee,
-        componentName: 'Bee'
+        endpoint: 'bee',
+        component: Bee
     },
     {
         title: 'Brush Cursor',
         codepenSlug: 'poZgOyP',
         endpoint: 'brush-cursor',
-        component: BrushCursor,
-        componentName: 'BrushCursor'
+        component: BrushCursor
     },
     {
         title: 'Butterfly',
         codepenSlug: 'eYjJLWM',
         endpoint: 'butterfly',
-        component: Butterfly,
-        componentName: 'Butterfly'
+        component: Butterfly
     },
     {
         title: 'Clock',
         codepenSlug: 'xxJZapm',
         endpoint: 'clock',
-        component: Clock,
-        componentName: 'Clock'
+        component: Clock
     },
     {
         title: 'Eight',
         codepenSlug: 'zYLrJjm',
         endpoint: 'eight',
-        component: Eight,
-        componentName: 'Eight'
+        component: Eight
     },
     {
         title: 'Slightly Smiling',
         codepenSlug: 'wvxMEXg',
         endpoint: 'slightly-smiling',
-        component: SlightlySmiling,
-        componentName: 'SlightlySmiling'
+        component: SlightlySmiling
     },
     {
         title: 'Pacman',
         codepenSlug: 'qBybMeW',
         endpoint: 'pacman',
-        component: Pacman,
-        componentName: 'Pacman'
+        component: Pacman
     },
     {
         title: 'Red',
         codepenSlug: 'wvxMYBr',
         endpoint: 'red',
-        component: Red,
-        componentName: 'Red'
+        component: Red
     },
     {
         title: 'Riplle',
         codepenSlug: 'poZgxJZ',
         endpoint: 'ripple',
-        component: Ripple,
-        componentName: 'Ripple'
+        component: Ripple
     },
     {
         title: 'Rocket',
         codepenSlug: 'KKBVGdB',
         endpoint: 'rocket',
-        component: Rocket,
-        componentName: 'Rocket'
+        component: Rocket
     },
     {
         title: 'Rolex',
         codepenSlug: 'eYjJPZX',
-        endpoint: 'rolex', component: Rolex,
-        componentName: 'Rolex'
+        endpoint: 'rolex', component: Rolex
     },
     {
         title: 'SmileInjection',
         codepenSlug: 'RwBreVp',
         endpoint: 'smile-injection',
-        component: SmileInjection,
-        componentName: 'SmileInjection'
+        component: SmileInjection
     }
 ];
 

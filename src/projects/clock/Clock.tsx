@@ -4,13 +4,13 @@ import ProjectHeader from "../../components/project-header/ProjectHeader";
 
 export default function Clock() {
     onMount(() => {
-        const clock: HTMLDivElement = document.querySelector(".clock");
-        const year: HTMLDivElement = document.querySelector(".year");
-        const month: HTMLDivElement = document.querySelector(".month");
-        const day: HTMLDivElement = document.querySelector(".day");
-        const hour: HTMLDivElement = document.querySelector(".hour");
-        const minute: HTMLDivElement = document.querySelector(".minute");
-        const second: HTMLDivElement = document.querySelector(".second");
+        const clock: HTMLDivElement = document.querySelector("#Clock .clock");
+        const year: HTMLDivElement = document.querySelector("#Clock .year");
+        const month: HTMLDivElement = document.querySelector("#Clock .month");
+        const day: HTMLDivElement = document.querySelector("#Clock .day");
+        const hour: HTMLDivElement = document.querySelector("#Clock .hour");
+        const minute: HTMLDivElement = document.querySelector("#Clock .minute");
+        const second: HTMLDivElement = document.querySelector("#Clock .second");
         let rotation1 = 0;
         let rotation2 = 30;
 

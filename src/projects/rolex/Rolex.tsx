@@ -1,6 +1,6 @@
-import './Rolex.scss';
 import {onMount} from "solid-js";
 import ProjectHeader from "../../components/project-header/ProjectHeader";
+import './Rolex.scss';
 
 export default function Rolex() {
     onMount(() => {
@@ -26,10 +26,10 @@ export default function Rolex() {
     }
 
     function rotateClockHands(secAngle, minAngle, hrAngle, day) {
-        const second: HTMLDivElement = document.querySelector(".second");
-        const minute: HTMLDivElement = document.querySelector(".minute");
-        const hour: HTMLDivElement = document.querySelector(".hour");
-        const dateValue: HTMLDivElement = document.querySelector(".date-value");
+        const second: HTMLDivElement = document.querySelector("#Rolex .second");
+        const minute: HTMLDivElement = document.querySelector("#Rolex .minute");
+        const hour: HTMLDivElement = document.querySelector("#Rolex .hour");
+        const dateValue: HTMLDivElement = document.querySelector("#Rolex .date-value");
         second.style.transform = `translate(-50%, -50%) rotate(${secAngle}deg)`;
         minute.style.transform = `translate(-50%, -50%) rotate(${minAngle}deg)`;
         hour.style.transform = `translate(-50%, -50%) rotate(${hrAngle}deg)`;

@@ -1,19 +1,18 @@
 import {RouteDefinition, Router, useRoutes} from "@solidjs/router";
 import {lazy} from "solid-js";
 import {PROJECT_MODELS} from "./config/Config";
+import Home from "./pages/home/Home";
 
 export default function App() {
-    const lazyImport = (path: string) => lazy(() => import(path));
-
     const routes: RouteDefinition[] = [
         {
             path: '/',
-            component: lazyImport('./pages/home/Home')
+            component: Home
         },
         ...PROJECT_MODELS.map((projectModel) => {
             return {
                 path: `/${projectModel.endpoint}`,
-                component: lazyImport(`./projects/${projectModel.endpoint}/${projectModel.componentName}`)
+                component: projectModel.component
             }
         })
     ];

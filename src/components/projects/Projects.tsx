@@ -10,14 +10,6 @@ export default function Projects() {
     let projects;
 
     onMount(() => {
-        // const middle = Math.floor(n / 2);
-        // const interval = setInterval(() => {
-        //     if (currentIndex() === middle - 1) {
-        //         clearInterval(interval);
-        //     }
-        //     scrollRight();
-        // }, 300);
-
         let touchstartX = 0;
         let touchendX = 0;
 
@@ -97,7 +89,7 @@ export default function Projects() {
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
             </div>
-            <div class="scroll right">.
+            <div class="scroll right">
                 <button onclick={scrollRight}>
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>

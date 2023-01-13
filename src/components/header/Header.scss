@@ -1,10 +1,11 @@
 #Header {
+  $header-border-radius: clamp(2rem, 5vw, 4rem);
   padding: clamp(1rem, 5vw, 2rem) 0;
-  border-radius: 0 0 2rem 2rem;
+  border-radius: 0 0 $header-border-radius $header-border-radius;
   position: relative;
   background-color: var(--dark-background);
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 15px 5px var(--shadow);
   overflow: hidden;
 
   header {

@@ -8,11 +8,10 @@
   transition: 1s ease-in-out;
   background: var(--dark-background);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(15px);
   border: 2px dashed var(--accent);
 
   .theme {
-    font-size: clamp(1.5rem, 3vw, 4rem);
+    font-size: clamp(1.5rem, 3vw, 3rem);
     color: var(--secondary);
     position: absolute;
     display: grid;

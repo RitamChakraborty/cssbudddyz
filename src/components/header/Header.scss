@@ -5,6 +5,7 @@
   background-color: var(--dark-background);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
+  overflow: hidden;
 
   header {
     padding: 0 1rem;

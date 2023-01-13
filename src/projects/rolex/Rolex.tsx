@@ -1,40 +1,46 @@
-import {onMount} from "solid-js";
+import {onCleanup, onMount} from "solid-js";
 import ProjectHeader from "../../components/project-header/ProjectHeader";
 import './Rolex.scss';
 
 export default function Rolex() {
+    let animation;
+
     onMount(() => {
         calculateAngle();
 
-        setInterval(() => {
+        animation = setInterval(() => {
             calculateAngle();
         }, 1000);
+
+        function calculateAngle() {
+            const time = new Date();
+            const sec = time.getSeconds();
+            const min = time.getMinutes();
+            const hr = time.getHours();
+            const day = time.getDate();
+
+            const secAngle = sec * 6 % 360;
+            const minAngle = (min + sec / 60) * 6 % 360;
+            const hrAngle = (hr + min / 60 + sec / 3600) * 30 % 360;
+
+            rotateClockHands(secAngle, minAngle, hrAngle, day);
+        }
+
+        function rotateClockHands(secAngle, minAngle, hrAngle, day) {
+            const second: HTMLDivElement = document.querySelector("#Rolex .second");
+            const minute: HTMLDivElement = document.querySelector("#Rolex .minute");
+            const hour: HTMLDivElement = document.querySelector("#Rolex .hour");
+            const dateValue: HTMLDivElement = document.querySelector("#Rolex .date-value");
+            second.style.transform = `translate(-50%, -50%) rotate(${secAngle}deg)`;
+            minute.style.transform = `translate(-50%, -50%) rotate(${minAngle}deg)`;
+            hour.style.transform = `translate(-50%, -50%) rotate(${hrAngle}deg)`;
+            dateValue.innerText = day.toString();
+        }
     });
 
-    function calculateAngle() {
-        const time = new Date();
-        const sec = time.getSeconds();
-        const min = time.getMinutes();
-        const hr = time.getHours();
-        const day = time.getDate();
-
-        const secAngle = sec * 6 % 360;
-        const minAngle = (min + sec / 60) * 6 % 360;
-        const hrAngle = (hr + min / 60 + sec / 3600) * 30 % 360;
-
-        rotateClockHands(secAngle, minAngle, hrAngle, day);
-    }
-
-    function rotateClockHands(secAngle, minAngle, hrAngle, day) {
-        const second: HTMLDivElement = document.querySelector("#Rolex .second");
-        const minute: HTMLDivElement = document.querySelector("#Rolex .minute");
-        const hour: HTMLDivElement = document.querySelector("#Rolex .hour");
-        const dateValue: HTMLDivElement = document.querySelector("#Rolex .date-value");
-        second.style.transform = `translate(-50%, -50%) rotate(${secAngle}deg)`;
-        minute.style.transform = `translate(-50%, -50%) rotate(${minAngle}deg)`;
-        hour.style.transform = `translate(-50%, -50%) rotate(${hrAngle}deg)`;
-        dateValue.innerText = day.toString();
-    }
+    onCleanup(() => {
+        clearInterval(animation);
+    })
 
     return (
         <>

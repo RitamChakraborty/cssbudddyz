@@ -1,15 +1,24 @@
 import './Projects.scss';
-import {createSignal, For, onMount} from "solid-js";
+import {createSignal, For, onMount, Show} from "solid-js";
 import Project from "../project/Project";
-import ProjectModel from "../../models/ProjectModel";
 import {PROJECT_MODELS} from "../../config/Config";
+import ProjectCardService from "../../service/ProjectCardService";
 
 export default function Projects() {
+    const projectCardService = ProjectCardService();
     const n = PROJECT_MODELS.length;
     const [currentIndex, setCurrentIndex] = createSignal<number>(0);
     let projects;
 
     onMount(() => {
+        const interval = setInterval(() => {
+            if (currentIndex() === projectCardService.currentCardIndex()) {
+                clearInterval(interval);
+                return;
+            }
+            scrollRightWrapper();
+        }, 100);
+
         let touchstartX = 0;
         let touchendX = 0;
 
@@ -29,7 +38,7 @@ export default function Projects() {
                 scrollRight()
             }
         }
-    })
+    });
 
     function createStyleForCard(index: number) {
         let marginLeft = '';
@@ -59,41 +68,52 @@ export default function Projects() {
         }
     }
 
-    function scrollLeft() {
-        if (currentIndex() === 0) {
-            return;
-        }
+    function showScrollLeftButton() {
+        return currentIndex() !== 0;
+    }
 
+    function scrollLeft() {
         setCurrentIndex((value) => value - 1);
+        projectCardService.decrementCurrentCardIndex();
+    }
+
+    function showScrollRightButton() {
+        return currentIndex() !== n - 1;
     }
 
     function scrollRight() {
-        if (currentIndex() === n - 1) {
-            return;
-        }
+        setCurrentIndex((value) => value + 1);
+        projectCardService.incrementCurrentCardIndex();
+    }
 
+    function scrollRightWrapper() {
         setCurrentIndex((value) => value + 1);
     }
 
     return (
         <div id="Projects" ref={projects}>
             <div class="container">
-                <For<ProjectModel> each={PROJECT_MODELS}>{(project, index) =>
+                <For each={PROJECT_MODELS}>{(project, index) =>
                     <div class="card" style={createStyleForCard(index())}>
                         <Project projectModel={project}/>
                     </div>
                 }</For>
             </div>
-            <div class="scroll left">
-                <button onclick={scrollLeft}>
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-            </div>
-            <div class="scroll right">
-                <button onclick={scrollRight}>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-            </div>
+            <Show<boolean> when={showScrollLeftButton()} keyed>
+                <div class="scroll left">
+
+                    <button onclick={scrollLeft}>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+            </Show>
+            <Show<boolean> when={showScrollRightButton()} keyed>
+                <div class="scroll right">
+                    <button onclick={scrollRight}>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </Show>
         </div>
     )
 }

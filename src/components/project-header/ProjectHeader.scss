@@ -1,5 +1,5 @@
 #ProjectHeader {
-  $height: calc(clamp(2rem, 10vw, 3rem) + 2rem);
+  $height: calc(clamp(2rem, 10vw, 5rem) + 2rem);
   position: absolute;
   inset: 0;
   top: calc(#{$height} * -1);
@@ -23,7 +23,7 @@
   header {
     flex-grow: 1;
     text-align: center;
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(2rem, 10vw, 4rem);
   }
 
   .pull-down {

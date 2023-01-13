@@ -1,7 +1,5 @@
 :root {
-    --card-height: clamp(300px, 60vh, 450px);
-    --card-width: clamp(200px, 80vw, 500px);
-
+    --card-width: clamp(200px, 90vw, 700px);
     --primary: #e1e1e1;
     --secondary: #555555;
     --accent: lightblue;

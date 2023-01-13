@@ -10,7 +10,6 @@
     overflow: hidden;
 
     .card {
-      height: var(--card-height);
       min-width: var(--card-width);
       transform-style: preserve-3d;
       transition: 400ms ease-in-out;

@@ -1,13 +1,25 @@
 import "./ThemeSwitcher.scss";
-import {createSignal} from "solid-js";
-import {changeAppTheme} from "../../service/ThemeSwitcherService";
+import {createSignal, onMount} from "solid-js";
+import ThemeSwitcherService from "../../service/ThemeSwitcherService";
+import {Theme} from "../../utils/Theme";
 
 export default function ThemeSwitcher() {
     const [angle, setAngle] = createSignal<number>(0);
+    const themeSwitcherService = ThemeSwitcherService();
+
+    onMount(() => {
+        if (themeSwitcherService.theme() === Theme.DARK) {
+            changeThemeWrapper();
+        }
+    })
+
+    function changeThemeWrapper() {
+        setAngle((value) => (value + 0.18));
+    }
 
     function changeTheme() {
-        setAngle((value) => (value + 0.18));
-        changeAppTheme();
+        changeThemeWrapper();
+        themeSwitcherService.changeAppTheme();
     }
 
     return (

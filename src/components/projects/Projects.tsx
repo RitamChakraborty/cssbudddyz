@@ -3,7 +3,7 @@ import {createSignal, For, onMount, Show} from "solid-js";
 import Project from "../project/Project";
 import {PROJECT_MODELS, SCROLLING_ANIMATION_DELAY, SWIPE_THRESHOLD} from "../../config/Config";
 import ProjectCardService from "../../service/ProjectCardService";
-import {Constant} from "../../config/Constant";
+import {Constant} from "../../utils/Constant";
 
 export default function Projects() {
     const projectCardService = ProjectCardService();

@@ -1,7 +1,7 @@
 import './Projects.scss';
 import {createSignal, For, onMount, Show} from "solid-js";
 import Project from "../project/Project";
-import {PROJECT_MODELS} from "../../config/Config";
+import {PROJECT_MODELS, SCROLLING_ANIMATION_DELAY, SWIPE_THRESHOLD} from "../../config/Config";
 import ProjectCardService from "../../service/ProjectCardService";
 
 export default function Projects() {
@@ -17,7 +17,7 @@ export default function Projects() {
                 return;
             }
             scrollRightWrapper();
-        }, 100);
+        }, SCROLLING_ANIMATION_DELAY);
 
         let touchstartX = 0;
         let touchendX = 0;
@@ -32,9 +32,9 @@ export default function Projects() {
         }, false);
 
         function handleGesture() {
-            if (touchendX > touchstartX) {
+            if (touchendX - touchstartX >= SWIPE_THRESHOLD) {
                 scrollLeft()
-            } else if (touchendX < touchstartX) {
+            } else if (touchstartX - touchendX >= SWIPE_THRESHOLD) {
                 scrollRight()
             }
         }

@@ -45,6 +45,7 @@ export default function Projects() {
         let marginRight = '';
         let zIndex = n;
         let transform = 'perspective(1000px)';
+        let pointerEvent = "none";
 
         if (index === 0) {
             marginLeft = `calc(50vw - ((var(--card-width) / 2) * ${currentIndex() + 1}))`;
@@ -58,6 +59,8 @@ export default function Projects() {
             marginLeft = 'calc(var(--card-width) / 2 * -1)';
             zIndex = n - index;
             transform += ' rotateY(-30deg) scale(0.8)';
+        } else {
+            pointerEvent = "inherit";
         }
 
         return {
@@ -65,6 +68,7 @@ export default function Projects() {
             "margin-right": marginRight,
             "z-index": zIndex,
             transform: transform,
+            "pointer-events": pointerEvent
         }
     }
 
@@ -103,7 +107,7 @@ export default function Projects() {
             <div class="container">
                 <For each={PROJECT_MODELS}>{(project, index) =>
                     <div class="card" style={createStyleForCard(index())}>
-                        <Project projectModel={project}/>
+                        <Project projectModel={project} focused={index() === currentIndex()}/>
                     </div>
                 }</For>
             </div>

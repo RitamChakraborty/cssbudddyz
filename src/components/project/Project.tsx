@@ -27,8 +27,16 @@ export default function Project(projectProp: ProjectProp) {
             <div class="footer">
                 <div class="title">{projectModel.title}</div>
                 <div class="nav">
-                    <IconButton icon="fa-brands fa-codepen" onPressed={handleCodepen}/>
-                    <IconButton icon="fa-solid fa-arrow-up-right-from-square" onPressed={handlePreview}/>
+                    <IconButton
+                        icon="fa-brands fa-codepen"
+                        onPressed={handleCodepen}
+                        disabled={!projectProp.focused}
+                    />
+                    <IconButton
+                        icon="fa-solid fa-arrow-up-right-from-square"
+                        onPressed={handlePreview}
+                        disabled={!projectProp.focused}
+                    />
                 </div>
             </div>
         </div>

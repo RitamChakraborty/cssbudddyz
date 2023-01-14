@@ -3,6 +3,7 @@ import {createSignal, For, onMount, Show} from "solid-js";
 import Project from "../project/Project";
 import {PROJECT_MODELS, SCROLLING_ANIMATION_DELAY, SWIPE_THRESHOLD} from "../../config/Config";
 import ProjectCardService from "../../service/ProjectCardService";
+import {Constant} from "../../config/Constant";
 
 export default function Projects() {
     const projectCardService = ProjectCardService();
@@ -11,6 +12,12 @@ export default function Projects() {
     let projects;
 
     onMount(() => {
+        initialAnimation();
+        handleTouchInput();
+        handleKeyboardInput()
+    });
+
+    function initialAnimation() {
         const interval = setInterval(() => {
             if (currentIndex() === projectCardService.currentCardIndex()) {
                 clearInterval(interval);
@@ -18,7 +25,9 @@ export default function Projects() {
             }
             scrollRightWrapper();
         }, SCROLLING_ANIMATION_DELAY);
+    }
 
+    function handleTouchInput() {
         let touchstartX = 0;
         let touchendX = 0;
 
@@ -38,7 +47,17 @@ export default function Projects() {
                 scrollRight()
             }
         }
-    });
+    }
+
+    function handleKeyboardInput() {
+        window.document.addEventListener('keydown', (e) => {
+            if (e.code === Constant.ARROW_LEFT) {
+                scrollLeft();
+            } else if (e.code === Constant.ARROW_RIGHT) {
+                scrollRight();
+            }
+        });
+    }
 
     function createStyleForCard(index: number) {
         let marginLeft = '';

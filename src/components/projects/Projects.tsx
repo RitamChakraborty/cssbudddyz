@@ -68,20 +68,28 @@ export default function Projects() {
         }
     }
 
-    function showScrollLeftButton() {
+    function scrollingLeftPossible() {
         return currentIndex() !== 0;
     }
 
     function scrollLeft() {
+        if (!scrollingLeftPossible()) {
+            return;
+        }
+
         setCurrentIndex((value) => value - 1);
         projectCardService.decrementCurrentCardIndex();
     }
 
-    function showScrollRightButton() {
+    function scrollingRightPossible() {
         return currentIndex() !== n - 1;
     }
 
     function scrollRight() {
+        if (!scrollingRightPossible()) {
+            return;
+        }
+
         setCurrentIndex((value) => value + 1);
         projectCardService.incrementCurrentCardIndex();
     }
@@ -99,7 +107,7 @@ export default function Projects() {
                     </div>
                 }</For>
             </div>
-            <Show<boolean> when={showScrollLeftButton()} keyed>
+            <Show<boolean> when={scrollingLeftPossible()} keyed>
                 <div class="scroll left">
 
                     <button onclick={scrollLeft}>
@@ -107,7 +115,7 @@ export default function Projects() {
                     </button>
                 </div>
             </Show>
-            <Show<boolean> when={showScrollRightButton()} keyed>
+            <Show<boolean> when={scrollingRightPossible()} keyed>
                 <div class="scroll right">
                     <button onclick={scrollRight}>
                         <i class="fa-solid fa-chevron-right"></i>

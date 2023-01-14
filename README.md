@@ -2,7 +2,7 @@
 <img align="right" src=".screenshots/budddyz.png" alt="Me and my css buddy">
 
 
-A showcase website made with the collaboration between me and my girlfriend [Shuktika](https://github.com/Shuktika15) represent our skills in CSS.
+A showcase website made with the collaboration between me and my girlfriend [Shuktika](https://github.com/Shuktika15) to represent our **CSS** skills.
 
 ## Technology
 

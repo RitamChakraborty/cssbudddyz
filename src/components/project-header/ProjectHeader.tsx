@@ -6,7 +6,7 @@ export default function ProjectHeader() {
     const navigate = useNavigate();
 
     function navigateBack() {
-        navigate('/')
+        navigate('/cssbudddyz/')
     }
 
     return (

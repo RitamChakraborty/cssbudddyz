@@ -27,19 +27,19 @@ visit [CodePen@RitamChakraborty](https://codepen.io/RitamChakraborty/).
 
 <p align="center">
     <img src=".screenshots/light_1.png" alt="Desktop view in light theme" height="300" width="520" hspace="10" vspace="10">
-    <img src=".screenshots/light_2.png" alt="Mobile view in light theme" height="300" width="150" hspace="10" vspace="10">
+    <img src=".screenshots/light_2.png" alt="Mobile view in light theme" height="300" width="175" hspace="10" vspace="10">
 </p>
 
 > #### Dark Theme
 
 <p align="center">
     <img src=".screenshots/dark_1.png" alt="Desktop view in dark theme" height="300" width="520" hspace="10" vspace="10">
-    <img src=".screenshots/dark_2.png" alt="Mobile view in dark theme" height="300" width="150" hspace="10" vspace="10">
+    <img src=".screenshots/dark_2.png" alt="Mobile view in dark theme" height="300" width="175" hspace="10" vspace="10">
 </p>
 
 ## Deployment
 
-The website is deployed to [Vercel](https://vercel.com). Checkout the deployment [here](https://cssbudddyz.vercel.app/).
+Check out the deployed website [here](https://ritamchakraborty.github.io/cssbudddyz/).
 
 <blockquote align="center">
     <h1>𝔊𝔦𝔳𝔢 𝔦𝔱 𝔞 𝔰𝔱𝔞𝔯 𝔦𝔣 𝔶𝔬𝔲 𝔩𝔦𝔨𝔢𝔡 𝔦𝔱</h1>

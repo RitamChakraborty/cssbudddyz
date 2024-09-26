@@ -26,15 +26,15 @@ visit [CodePen@RitamChakraborty](https://codepen.io/RitamChakraborty/).
 > #### Light Theme
 
 <p align="center">
-    <img src=".screenshots/light1.jpg" alt="Desktop view in light theme" height="300" width="520" hspace="10" vspace="10">
-    <img src=".screenshots/light2.jpg" alt="Mobile view in light theme" height="300" width="150" hspace="10" vspace="10">
+    <img src=".screenshots/light_1.png" alt="Desktop view in light theme" height="300" width="520" hspace="10" vspace="10">
+    <img src=".screenshots/light_2.png" alt="Mobile view in light theme" height="300" width="150" hspace="10" vspace="10">
 </p>
 
 > #### Dark Theme
 
 <p align="center">
-    <img src=".screenshots/dark1.jpg" alt="Desktop view in dark theme" height="300" width="520" hspace="10" vspace="10">
-    <img src=".screenshots/dark2.jpg" alt="Mobile view in dark theme" height="300" width="150" hspace="10" vspace="10">
+    <img src=".screenshots/dark_1.png" alt="Desktop view in dark theme" height="300" width="520" hspace="10" vspace="10">
+    <img src=".screenshots/dark_2.png" alt="Mobile view in dark theme" height="300" width="150" hspace="10" vspace="10">
 </p>
 
 ## Deployment

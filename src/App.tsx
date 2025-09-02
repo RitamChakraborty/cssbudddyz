@@ -1,4 +1,4 @@
-import {RouteDefinition, Router, useRoutes} from "@solidjs/router";
+import {RouteDefinition, Router, Route} from "@solidjs/router";
 import {PROJECT_MODELS} from "./config/Config";
 import Home from "./pages/home/Home";
 
@@ -16,10 +16,11 @@ export default function App() {
             }
         })
     ];
-    const Routes = useRoutes(routes);
     return (
         <Router>
-            <Routes/>
+            {routes.map((r: RouteDefinition) => (
+                <Route path={r.path} component={r.component} />
+            ))}
         </Router>
     );
 }
